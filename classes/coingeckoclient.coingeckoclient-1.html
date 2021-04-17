@@ -55,7 +55,7 @@
 					<a href="../modules.html">coingecko-api-v3</a>
 				</li>
 				<li>
-					<a href="../modules/coingeckoclient.html">coinGeckoClient</a>
+					<a href="../modules/coingeckoclient.html">CoinGeckoClient</a>
 				</li>
 				<li>
 					<a href="coingeckoclient.coingeckoclient-1.html">CoinGeckoClient</a>
@@ -94,12 +94,25 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Coin Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#coin" class="tsd-kind-icon">coin</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#coinlist" class="tsd-kind-icon">coin<wbr>List</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#coinmarket" class="tsd-kind-icon">coin<wbr>Market</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#cointickers" class="tsd-kind-icon">coin<wbr>Tickers</a></li>
+							</ul>
+							<h3>Other Methods</h3>
+							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private"><a href="coingeckoclient.coingeckoclient-1.html#makerequest" class="tsd-kind-icon">make<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#ping" class="tsd-kind-icon">ping</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#trending" class="tsd-kind-icon">trending</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="coingeckoclient.coingeckoclient-1.html#withpathparams" class="tsd-kind-icon">with<wbr>Path<wbr>Params</a></li>
+							</ul>
+							<h3>Simple Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#simpleprice" class="tsd-kind-icon">simple<wbr>Price</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#simplesupportedcurrencies" class="tsd-kind-icon">simple<wbr>Supported<wbr>Currencies</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#simpletokenprice" class="tsd-kind-icon">simple<wbr>Token<wbr>Price</a></li>
 							</ul>
 						</section>
 					</div>
@@ -117,7 +130,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in coinGeckoClient.ts:7</li>
+									<li>Defined in CoinGeckoClient.ts:8</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="coingeckoclient.coingeckoclient-1.html" class="tsd-signature-type" data-tsd-kind="Class">CoinGeckoClient</a></h4>
@@ -133,7 +146,7 @@
 					<div class="tsd-signature tsd-kind-icon">api<wbr>V3Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;https://api.coingecko.com/api/v3&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in coinGeckoClient.ts:7</li>
+							<li>Defined in CoinGeckoClient.ts:8</li>
 						</ul>
 					</aside>
 				</section>
@@ -143,38 +156,116 @@
 					<div class="tsd-signature tsd-kind-icon">http<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AxiosInstance</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in coinGeckoClient.ts:6</li>
+							<li>Defined in CoinGeckoClient.ts:7</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
+				<h2>Coin Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="coinlist" class="tsd-anchor"></a>
-					<h3>coin<wbr>List</h3>
+					<a name="coin" class="tsd-anchor"></a>
+					<h3>coin</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">coin<wbr>List<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>include_platform<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.coinlistresponseitem.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinListResponseItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">coin<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>community_data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>developer_data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>localization<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>market_data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>sparkline<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>tickers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.coinfullinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinFullInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in coinGeckoClient.ts:33</li>
+									<li>Defined in CoinGeckoClient.ts:92</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Use this to obtain all the coins’ id in order to make API calls</p>
+									<p>Get current data (name, price, market, ... including exchange tickers) for a coin
+										IMPORTANT:
+										Ticker object is limited to 100 items, to get more tickers, use /coins/{id}/tickers
+										Ticker is_stale is true when ticker that has not been updated/unchanged from the exchange for a while.
+										Ticker is_anomaly is true if ticker’s price is outliered by our system.
+									You are responsible for managing how you want to display these information (e.g. footnote, different background, change opacity, hide)</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>input: <span class="tsd-signature-symbol">{ </span>include_platform<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>input: <span class="tsd-signature-symbol">{ </span>community_data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>developer_data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>localization<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>market_data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>sparkline<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>tickers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>platform<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">false</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> community_<wbr>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Include community_data data (true/false) [default: true]</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> developer_<wbr>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Include developer_data data (true/false) [default: true]</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>pass the coin id (can be obtained from /coins) eg. bitcoin</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> localization<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Include all localized languages in response (true/false)</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> market_<wbr>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Include market_data (true/false) [default: true]</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> sparkline<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Include sparkline 7 days data (eg. true, false)</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> tickers<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>nclude tickers data (true/false) [default: true]</p>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.coinfullinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinFullInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="coinlist" class="tsd-anchor"></a>
+					<h3>coin<wbr>List</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">coin<wbr>List<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>include_platform<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.coinlistresponseitem.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinListResponseItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:46</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>List all supported coins id, name and symbol (no pagination required)
+									Use this to obtain all the coins’ id in order to make API calls</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-symbol">{ </span>include_platform<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>platform<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
 											<div class="tsd-comment tsd-typography">
 												<p>flag to include platform contract addresses (eg. 0x… for Ethereum based tokens).
 												valid values: true, false</p>
@@ -187,17 +278,165 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
-					<a name="makerequest" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> make<wbr>Request</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">make<wbr>Request&lt;T&gt;<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="../enums/enum.api_routes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">API_ROUTES</a>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="coinmarket" class="tsd-anchor"></a>
+					<h3>coin<wbr>Market</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">coin<wbr>Market<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>category<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;decentralized_finance_defi&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;stablecoins&quot;</span><span class="tsd-signature-symbol">; </span>ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;market_cap_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gecko_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gecko_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;market_cap_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volume_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volume_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;id_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;id_desc&quot;</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>per_page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>price_change_percentage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>sparkline<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>vs_currency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.coinmarket.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinMarket</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in coinGeckoClient.ts:12</li>
+									<li>Defined in CoinGeckoClient.ts:62</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>List all supported coins price, market cap, volume, and market related data</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-symbol">{ </span>category<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;decentralized_finance_defi&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;stablecoins&quot;</span><span class="tsd-signature-symbol">; </span>ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;market_cap_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gecko_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gecko_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;market_cap_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volume_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volume_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;id_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;id_desc&quot;</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>per_page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>price_change_percentage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>sparkline<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>vs_currency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> category<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;decentralized_finance_defi&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;stablecoins&quot;</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>filter by coin category, only decentralized_finance_defi and stablecoins are supported at the moment</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>The ids of the coin, comma separated crytocurrency symbols (base). refers to /coins/list. When left empty, returns numbers the coins observing the params limit and start</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;market_cap_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gecko_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gecko_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;market_cap_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volume_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volume_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;id_asc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;id_desc&quot;</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>valid values: market_cap_desc, gecko_desc, gecko_asc, market_cap_asc, market_cap_desc, volume_asc, volume_desc, id_asc, id_desc</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Page through results</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> per_<wbr>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Total results per page (valid values: 1…250)</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> price_<wbr>change_<wbr>percentage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> sparkline<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Include sparkline 7 days data (eg. true, false)</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>vs_<wbr>currency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>The target currency of market data (usd, eur, jpy, etc.)</p>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.coinmarket.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinMarket</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cointickers" class="tsd-anchor"></a>
+					<h3>coin<wbr>Tickers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">coin<wbr>Tickers<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>exchange_ids<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>include_exchange_logo<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;volume_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;trust_score_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;trust_score_asc&quot;</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.cointickerresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinTickerResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:120</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get coin tickers (paginated to 100 items)</p>
+								</div>
+								<p>IMPORTANT:
+									Ticker is_stale is true when ticker that has not been updated/unchanged from the exchange for a while.
+									Ticker is_anomaly is true if ticker’s price is outliered by our system.
+								You are responsible for managing how you want to display these information (e.g. footnote, different background, change opacity, hide)</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-symbol">{ </span>depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>exchange_ids<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>include_exchange_logo<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;volume_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;trust_score_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;trust_score_asc&quot;</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>flag to show 2% orderbook depth. valid values: true, false</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> exchange_<wbr>ids<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>filter results by exchange_ids (ref: v3/exchanges/list)</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>pass the coin id (can be obtained from /coins) eg. bitcoin</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>exchange_<wbr>logo<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>flag to show exchange_logo</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;volume_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;trust_score_desc&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;trust_score_asc&quot;</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>valid values: trust_score_desc (default), trust_score_asc and volume_desc</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Page through results</p>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.cointickerresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">CoinTickerResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+					<a name="makerequest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> make<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">make<wbr>Request&lt;T&gt;<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="../enums/enum.api_routes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">API_ROUTES</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -212,7 +451,7 @@
 									<h5>action: <a href="../enums/enum.api_routes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">API_ROUTES</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <span class="tsd-signature-type">any</span></h5>
+									<h5>params: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -229,7 +468,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in coinGeckoClient.ts:20</li>
+									<li>Defined in CoinGeckoClient.ts:31</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -251,10 +490,197 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in coinGeckoClient.ts:23</li>
+									<li>Defined in CoinGeckoClient.ts:34</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.trendingresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">TrendingResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="withpathparams" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> with<wbr>Path<wbr>Params</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">with<wbr>Path<wbr>Params<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, replacements<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:13</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>replacements: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Simple Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="simpleprice" class="tsd-anchor"></a>
+					<h3>simple<wbr>Price</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Price<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>include_24hr_change<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_24hr_vol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_last_updated_at<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_market_cap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>vs_currency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.simplepriceresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">SimplePriceResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:139</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the current price of any cryptocurrencies in any other supported currencies that you need.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-symbol">{ </span>ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>include_24hr_change<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_24hr_vol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_last_updated_at<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_market_cap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>vs_currency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>The ids of the coin, comma separated crytocurrency symbols (base). refers to /coins/list. When left empty, returns numbers the coins observing the params limit and start</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>24hr_<wbr>change<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>24hr_<wbr>vol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>last_<wbr>updated_<wbr>at<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>market_<wbr>cap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>@default false</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>vs_<wbr>currency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>vs_currency of coins, comma-separated if querying more than 1 vs_currency. *refers to simple/supported_vs_currencies</p>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.simplepriceresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">SimplePriceResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="simplesupportedcurrencies" class="tsd-anchor"></a>
+					<h3>simple<wbr>Supported<wbr>Currencies</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Supported<wbr>Currencies<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:191</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get list of supported_vs_currencies.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>list of supported_vs_currencies</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="simpletokenprice" class="tsd-anchor"></a>
+					<h3>simple<wbr>Token<wbr>Price</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Token<wbr>Price<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>contract_addresses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ethereum&quot;</span><span class="tsd-signature-symbol">; </span>include_24hr_change<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_24hr_vol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_last_updated_at<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_market_cap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>vs_currencies<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.tokenpriceresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">TokenPriceResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in CoinGeckoClient.ts:174</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get current price of tokens (using contract addresses) for a given platform in any other currency that you need.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-symbol">{ </span>contract_addresses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ethereum&quot;</span><span class="tsd-signature-symbol">; </span>include_24hr_change<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_24hr_vol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_last_updated_at<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>include_market_cap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>vs_currencies<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>contract_<wbr>addresses<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>The contract address of tokens, comma separated</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ethereum&quot;</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>The id of the platform issuing tokens (Only ethereum is supported for now)</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>24hr_<wbr>change<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>24hr_<wbr>vol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>last_<wbr>updated_<wbr>at<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> include_<wbr>market_<wbr>cap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>vs_<wbr>currencies<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>vs_currency of coins, comma-separated if querying more than 1 vs_currency. *refers to simple/supported_vs_currencies</p>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.tokenpriceresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">TokenPriceResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The dictionary of price pair with details</p>
+							<ul>
+								<li>Example output<pre><code class="language-json"><span style="color: #000000">{</span>
+<span style="color: #000000"> </span><span style="color: #0451A5">&quot;0x8207c1ffc5b6804f6024322ccf34f29c3541ae26&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;btc&quot;</span><span style="color: #000000">: </span><span style="color: #098658">0.00003754</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;btc_market_cap&quot;</span><span style="color: #000000">: </span><span style="color: #098658">7914.297728099776</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;btc_24h_vol&quot;</span><span style="color: #000000">: </span><span style="color: #098658">2397.477480037078</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;btc_24h_change&quot;</span><span style="color: #000000">: </span><span style="color: #098658">3.7958858800037834</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;eth&quot;</span><span style="color: #000000">: </span><span style="color: #098658">0.0009474</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;eth_market_cap&quot;</span><span style="color: #000000">: </span><span style="color: #098658">199730.22336519035</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;eth_24h_vol&quot;</span><span style="color: #000000">: </span><span style="color: #098658">60504.258122696505</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;eth_24h_change&quot;</span><span style="color: #000000">: </span><span style="color: #098658">2.8068351977135007</span><span style="color: #000000">,</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;last_updated_at&quot;</span><span style="color: #000000">: </span><span style="color: #098658">1618664199</span>
+<span style="color: #000000">}</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -267,19 +693,19 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/coingeckoclient.html">coin<wbr>Gecko<wbr>Client</a>
+						<a href="../modules/coingeckoclient.html">Coin<wbr>Gecko<wbr>Client</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/coingeckoclient_test.html">coin<wbr>Gecko<wbr>Client.test</a>
+						<a href="../modules/coingeckoclient_test.html">Coin<wbr>Gecko<wbr>Client.test</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/enum.html">enum</a>
+						<a href="../modules/enum.html">Enum</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/inteface.html">Inteface</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/index.html">index</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/inteface.html">inteface</a>
 					</li>
 				</ul>
 			</nav>
@@ -300,7 +726,16 @@
 								<a href="coingeckoclient.coingeckoclient-1.html#http" class="tsd-kind-icon">http</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#coin" class="tsd-kind-icon">coin</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="coingeckoclient.coingeckoclient-1.html#coinlist" class="tsd-kind-icon">coin<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#coinmarket" class="tsd-kind-icon">coin<wbr>Market</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#cointickers" class="tsd-kind-icon">coin<wbr>Tickers</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
 								<a href="coingeckoclient.coingeckoclient-1.html#makerequest" class="tsd-kind-icon">make<wbr>Request</a>
@@ -309,7 +744,19 @@
 								<a href="coingeckoclient.coingeckoclient-1.html#ping" class="tsd-kind-icon">ping</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#simpleprice" class="tsd-kind-icon">simple<wbr>Price</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#simplesupportedcurrencies" class="tsd-kind-icon">simple<wbr>Supported<wbr>Currencies</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#simpletokenprice" class="tsd-kind-icon">simple<wbr>Token<wbr>Price</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="coingeckoclient.coingeckoclient-1.html#trending" class="tsd-kind-icon">trending</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="coingeckoclient.coingeckoclient-1.html#withpathparams" class="tsd-kind-icon">with<wbr>Path<wbr>Params</a>
 							</li>
 						</ul>
 					</li>
@@ -338,6 +785,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 		</div>
 	</div>

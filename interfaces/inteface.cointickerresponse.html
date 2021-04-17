@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TrendingResponse | coingecko-api-v3</title>
+	<title>CoinTickerResponse | coingecko-api-v3</title>
 	<meta name="description" content="Documentation for coingecko-api-v3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/inteface.html">Inteface</a>
 				</li>
 				<li>
-					<a href="inteface.trendingresponse.html">TrendingResponse</a>
+					<a href="inteface.cointickerresponse.html">CoinTickerResponse</a>
 				</li>
 			</ul>
-			<h1>Interface TrendingResponse</h1>
+			<h1>Interface CoinTickerResponse</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">TrendingResponse</span>
+						<span class="target">CoinTickerResponse</span>
 					</li>
 				</ul>
 			</section>
@@ -83,8 +83,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.trendingresponse.html#coins" class="tsd-kind-icon">coins</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.trendingresponse.html#exchanges" class="tsd-kind-icon">exchanges</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.cointickerresponse.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.cointickerresponse.html#tickers" class="tsd-kind-icon">tickers</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,22 +93,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="coins" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> coins</h3>
-					<div class="tsd-signature tsd-kind-icon">coins<span class="tsd-signature-symbol">:</span> <a href="inteface.coins.html" class="tsd-signature-type" data-tsd-kind="Interface">Coins</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Inteface.ts:8</li>
+							<li>Defined in Inteface.ts:265</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="exchanges" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> exchanges</h3>
-					<div class="tsd-signature tsd-kind-icon">exchanges<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="tickers" class="tsd-anchor"></a>
+					<h3>tickers</h3>
+					<div class="tsd-signature tsd-kind-icon">tickers<span class="tsd-signature-symbol">:</span> <a href="inteface.ticker.html" class="tsd-signature-type" data-tsd-kind="Interface">Ticker</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Inteface.ts:9</li>
+							<li>Defined in Inteface.ts:266</li>
 						</ul>
 					</aside>
 				</section>
@@ -157,9 +157,21 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.coinmarket.html" class="tsd-kind-icon">Coin<wbr>Market</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.cointickerresponse.html" class="tsd-kind-icon">Coin<wbr>Ticker<wbr>Response</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.cointickerresponse.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.cointickerresponse.html#tickers" class="tsd-kind-icon">tickers</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.coins.html" class="tsd-kind-icon">Coins</a>
 					</li>
@@ -199,21 +211,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.tokenpriceresponse.html" class="tsd-kind-icon">Token<wbr>Price<wbr>Response</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.trendingresponse.html" class="tsd-kind-icon">Trending<wbr>Response</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.trendingresponse.html#coins" class="tsd-kind-icon">coins</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.trendingresponse.html#exchanges" class="tsd-kind-icon">exchanges</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TrendingResponse | coingecko-api-v3</title>
+	<title>TokenPriceResponse | coingecko-api-v3</title>
 	<meta name="description" content="Documentation for coingecko-api-v3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,60 +58,63 @@
 					<a href="../modules/inteface.html">Inteface</a>
 				</li>
 				<li>
-					<a href="inteface.trendingresponse.html">TrendingResponse</a>
+					<a href="inteface.tokenpriceresponse.html">TokenPriceResponse</a>
 				</li>
 			</ul>
-			<h1>Interface TrendingResponse</h1>
+			<h1>Interface TokenPriceResponse</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Example output</p>
+						<pre><code class="language-json"><span style="color: #000000">{</span>
+<span style="color: #000000">   </span><span style="color: #0451A5">&quot;0x8207c1ffc5b6804f6024322ccf34f29c3541ae26&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;btc&quot;</span><span style="color: #000000">: </span><span style="color: #098658">0.00003754</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;btc_market_cap&quot;</span><span style="color: #000000">: </span><span style="color: #098658">7914.297728099776</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;btc_24h_vol&quot;</span><span style="color: #000000">: </span><span style="color: #098658">2397.477480037078</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;btc_24h_change&quot;</span><span style="color: #000000">: </span><span style="color: #098658">3.7958858800037834</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;eth&quot;</span><span style="color: #000000">: </span><span style="color: #098658">0.0009474</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;eth_market_cap&quot;</span><span style="color: #000000">: </span><span style="color: #098658">199730.22336519035</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;eth_24h_vol&quot;</span><span style="color: #000000">: </span><span style="color: #098658">60504.258122696505</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;eth_24h_change&quot;</span><span style="color: #000000">: </span><span style="color: #098658">2.8068351977135007</span><span style="color: #000000">,</span>
+<span style="color: #000000">     </span><span style="color: #0451A5">&quot;last_updated_at&quot;</span><span style="color: #000000">: </span><span style="color: #098658">1618664199</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">TrendingResponse</span>
+						<span class="target">TokenPriceResponse</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.trendingresponse.html#coins" class="tsd-kind-icon">coins</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.trendingresponse.html#exchanges" class="tsd-kind-icon">exchanges</a></li>
-							</ul>
-						</section>
+			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-module">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>contract_address: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-symbol">{}</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>ETH contract address same with the input pair</p>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="coins" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> coins</h3>
-					<div class="tsd-signature tsd-kind-icon">coins<span class="tsd-signature-symbol">:</span> <a href="inteface.coins.html" class="tsd-signature-type" data-tsd-kind="Interface">Coins</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in Inteface.ts:8</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="exchanges" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> exchanges</h3>
-					<div class="tsd-signature tsd-kind-icon">exchanges<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in Inteface.ts:9</li>
-						</ul>
-					</aside>
-				</section>
+				</div>
+				<ul class="tsd-parameters">
+					<li class="tsd-parameter-index-signature">
+						<h5><span class="tsd-signature-symbol">[</span>currency: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>price of coin for this currency</p>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -196,24 +199,16 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.ticker.html" class="tsd-kind-icon">Ticker</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="inteface.tokenpriceresponse.html" class="tsd-kind-icon">Token<wbr>Price<wbr>Response</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="inteface.trendingresponse.html" class="tsd-kind-icon">Trending<wbr>Response</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.trendingresponse.html#coins" class="tsd-kind-icon">coins</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.trendingresponse.html#exchanges" class="tsd-kind-icon">exchanges</a>
-							</li>
-						</ul>
+						<a href="inteface.tokenpriceresponse.html" class="tsd-kind-icon">Token<wbr>Price<wbr>Response</a>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="inteface.trendingresponse.html" class="tsd-kind-icon">Trending<wbr>Response</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -224,14 +219,13 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>

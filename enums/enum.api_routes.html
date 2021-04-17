@@ -55,7 +55,7 @@
 					<a href="../modules.html">coingecko-api-v3</a>
 				</li>
 				<li>
-					<a href="../modules/enum.html">enum</a>
+					<a href="../modules/enum.html">Enum</a>
 				</li>
 				<li>
 					<a href="enum.api_routes.html">API_ROUTES</a>
@@ -75,9 +75,15 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#coin" class="tsd-kind-icon">COIN</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#coin_list" class="tsd-kind-icon">COIN_<wbr>LIST</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#coin_market" class="tsd-kind-icon">COIN_<wbr>MARKET</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#coin_tickers" class="tsd-kind-icon">COIN_<wbr>TICKERS</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#ping" class="tsd-kind-icon">PING</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#search_trending" class="tsd-kind-icon">SEARCH_<wbr>TRENDING</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#simple_price" class="tsd-kind-icon">SIMPLE_<wbr>PRICE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#simple_supported_currencies" class="tsd-kind-icon">SIMPLE_<wbr>SUPPORTED_<wbr>CURRENCIES</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="enum.api_routes.html#simple_token_price" class="tsd-kind-icon">SIMPLE_<wbr>TOKEN_<wbr>PRICE</a></li>
 							</ul>
 						</section>
 					</div>
@@ -86,12 +92,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="coin_list" class="tsd-anchor"></a>
-					<h3>COIN_<wbr>LIST</h3>
-					<div class="tsd-signature tsd-kind-icon">COIN_<wbr>LIST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/coin/list&quot;</span></div>
+					<a name="coin" class="tsd-anchor"></a>
+					<h3>COIN</h3>
+					<div class="tsd-signature tsd-kind-icon">COIN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/coins/{id}&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in enum.ts:4</li>
+							<li>Defined in Enum.ts:4</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="coin_list" class="tsd-anchor"></a>
+					<h3>COIN_<wbr>LIST</h3>
+					<div class="tsd-signature tsd-kind-icon">COIN_<wbr>LIST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/coins/list&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in Enum.ts:5</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="coin_market" class="tsd-anchor"></a>
+					<h3>COIN_<wbr>MARKET</h3>
+					<div class="tsd-signature tsd-kind-icon">COIN_<wbr>MARKET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/coins/markets&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in Enum.ts:6</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="coin_tickers" class="tsd-anchor"></a>
+					<h3>COIN_<wbr>TICKERS</h3>
+					<div class="tsd-signature tsd-kind-icon">COIN_<wbr>TICKERS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/coins/{id}/tickers&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in Enum.ts:7</li>
 						</ul>
 					</aside>
 				</section>
@@ -101,7 +137,7 @@
 					<div class="tsd-signature tsd-kind-icon">PING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/ping&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in enum.ts:2</li>
+							<li>Defined in Enum.ts:2</li>
 						</ul>
 					</aside>
 				</section>
@@ -111,7 +147,37 @@
 					<div class="tsd-signature tsd-kind-icon">SEARCH_<wbr>TRENDING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/search/trending&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in enum.ts:3</li>
+							<li>Defined in Enum.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="simple_price" class="tsd-anchor"></a>
+					<h3>SIMPLE_<wbr>PRICE</h3>
+					<div class="tsd-signature tsd-kind-icon">SIMPLE_<wbr>PRICE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/simple/price&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in Enum.ts:8</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="simple_supported_currencies" class="tsd-anchor"></a>
+					<h3>SIMPLE_<wbr>SUPPORTED_<wbr>CURRENCIES</h3>
+					<div class="tsd-signature tsd-kind-icon">SIMPLE_<wbr>SUPPORTED_<wbr>CURRENCIES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/simple/supported_vs_currencies&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in Enum.ts:9</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="simple_token_price" class="tsd-anchor"></a>
+					<h3>SIMPLE_<wbr>TOKEN_<wbr>PRICE</h3>
+					<div class="tsd-signature tsd-kind-icon">SIMPLE_<wbr>TOKEN_<wbr>PRICE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;/simple/token_price/{id}&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in Enum.ts:10</li>
 						</ul>
 					</aside>
 				</section>
@@ -124,19 +190,19 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/coingeckoclient.html">coin<wbr>Gecko<wbr>Client</a>
+						<a href="../modules/coingeckoclient.html">Coin<wbr>Gecko<wbr>Client</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/coingeckoclient_test.html">coin<wbr>Gecko<wbr>Client.test</a>
+						<a href="../modules/coingeckoclient_test.html">Coin<wbr>Gecko<wbr>Client.test</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/enum.html">enum</a>
+						<a href="../modules/enum.html">Enum</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/inteface.html">Inteface</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/index.html">index</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/inteface.html">inteface</a>
 					</li>
 				</ul>
 			</nav>
@@ -148,13 +214,31 @@
 						<a href="enum.api_routes.html" class="tsd-kind-icon">API_<wbr>ROUTES</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="enum.api_routes.html#coin" class="tsd-kind-icon">COIN</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="enum.api_routes.html#coin_list" class="tsd-kind-icon">COIN_<wbr>LIST</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="enum.api_routes.html#coin_market" class="tsd-kind-icon">COIN_<wbr>MARKET</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="enum.api_routes.html#coin_tickers" class="tsd-kind-icon">COIN_<wbr>TICKERS</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="enum.api_routes.html#ping" class="tsd-kind-icon">PING</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="enum.api_routes.html#search_trending" class="tsd-kind-icon">SEARCH_<wbr>TRENDING</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="enum.api_routes.html#simple_price" class="tsd-kind-icon">SIMPLE_<wbr>PRICE</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="enum.api_routes.html#simple_supported_currencies" class="tsd-kind-icon">SIMPLE_<wbr>SUPPORTED_<wbr>CURRENCIES</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="enum.api_routes.html#simple_token_price" class="tsd-kind-icon">SIMPLE_<wbr>TOKEN_<wbr>PRICE</a>
 							</li>
 						</ul>
 					</li>
