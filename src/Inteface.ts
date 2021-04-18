@@ -4,9 +4,24 @@ export interface PingResponse {
   gecko_says: string;
 }
 
+export interface Exchange {
+  id: string;
+  name: string;
+  year_established: number;
+  country: string;
+  description: string;
+  url: string;
+  image: string;
+  has_trading_incentive: boolean;
+  trust_score: number;
+  trust_score_rank: number;
+  trade_volume_24h_btc: number;
+  trade_volume_24h_btc_normalized: number;
+}
+
 export interface TrendingResponse {
   coins?: Coins[];
-  exchanges?: any[];
+  exchanges?: Exchange[];
 }
 
 export interface Coins {
@@ -263,5 +278,105 @@ export interface CoinFullInfo {
 
 export interface CoinTickerResponse {
   name: string;
+  tickers: Ticker[]
+}
+
+export interface Localization {
+  en: string;
+  de: string;
+  es: string;
+  fr: string;
+  it: string;
+  pl: string;
+  ro: string;
+  hu: string;
+  nl: string;
+  pt: string;
+  sv: string;
+  vi: string;
+  tr: string;
+  ru: string;
+  ja: string;
+  zh: string;
+  "zh-tw": string;
+  ko: string;
+  ar: string;
+  th: string;
+  id: string;
+  [u: string]: string;
+}
+
+export interface CoinHistoryResponse extends BasicCoin {
+  localization: Localization;
+  image: Image;
+  market_data: MarketData;
+  community_data: CommunityData;
+  developer_data: DeveloperData;
+  public_interest_stats: PublicInterestStats;
+}
+
+
+export interface CoinMarketChartResponse {
+  prices: Array<Array<number>>,
+  market_caps: Array<Array<number>>,
+  total_volumes: Array<Array<number>>
+}
+
+
+export interface CoinStatusUpdateResponse {
+  status_updates: StatusUpdate[];
+}
+
+export interface Project {
+  type: string;
+  id: string;
+  name: string;
+  symbol: string;
+  image: Image;
+}
+
+export interface StatusUpdate {
+  description: string;
+  category: string;
+  created_at: Date;
+  user: string;
+  user_title: string;
+  pin: boolean;
+  project: Project;
+}
+
+export interface NameIdPair {
+  name: string;
+  id: string;
+}
+
+export interface ExchangeId {
+  name: string;
+  year_established: number;
+  country: null;
+  description: string;
+  url: string;
+  image: string;
+  facebook_url: string;
+  reddit_url: string;
+  telegram_url: string;
+  slack_url: string;
+  other_url_1: string;
+  other_url_2: string;
+  twitter_handle: string;
+  has_trading_incentive: boolean;
+  centralized: boolean;
+  public_notice: string;
+  alert_notice: string;
+  trust_score: null;
+  trust_score_rank: number;
+  trade_volume_24h_btc: number;
+  trade_volume_24h_btc_normalized: number;
+  tickers: Ticker[];
+  status_updates: any[];
+}
+
+export interface ExchangeIdTickerResponse {
+  name: string
   tickers: Ticker[]
 }
