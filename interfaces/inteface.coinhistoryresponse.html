@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ReposURL | coingecko-api-v3</title>
+	<title>CoinHistoryResponse | coingecko-api-v3</title>
 	<meta name="description" content="Documentation for coingecko-api-v3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/inteface.html">Inteface</a>
 				</li>
 				<li>
-					<a href="inteface.reposurl.html">ReposURL</a>
+					<a href="inteface.coinhistoryresponse.html">CoinHistoryResponse</a>
 				</li>
 			</ul>
-			<h1>Interface ReposURL</h1>
+			<h1>Interface CoinHistoryResponse</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ReposURL</span>
+						<a href="inteface.basiccoin.html" class="tsd-signature-type" data-tsd-kind="Interface">BasicCoin</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">CoinHistoryResponse</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -83,8 +88,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.reposurl.html#bitbucket" class="tsd-kind-icon">bitbucket</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.reposurl.html#github" class="tsd-kind-icon">github</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.coinhistoryresponse.html#community_data" class="tsd-kind-icon">community_<wbr>data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.coinhistoryresponse.html#developer_data" class="tsd-kind-icon">developer_<wbr>data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="inteface.coinhistoryresponse.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.coinhistoryresponse.html#image" class="tsd-kind-icon">image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.coinhistoryresponse.html#localization" class="tsd-kind-icon">localization</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.coinhistoryresponse.html#market_data" class="tsd-kind-icon">market_<wbr>data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="inteface.coinhistoryresponse.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.coinhistoryresponse.html#public_interest_stats" class="tsd-kind-icon">public_<wbr>interest_<wbr>stats</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="inteface.coinhistoryresponse.html#symbol" class="tsd-kind-icon">symbol</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,22 +105,95 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="bitbucket" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bitbucket</h3>
-					<div class="tsd-signature tsd-kind-icon">bitbucket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="community_data" class="tsd-anchor"></a>
+					<h3>community_<wbr>data</h3>
+					<div class="tsd-signature tsd-kind-icon">community_<wbr>data<span class="tsd-signature-symbol">:</span> <a href="inteface.communitydata.html" class="tsd-signature-type" data-tsd-kind="Interface">CommunityData</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L160">Inteface.ts:160</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L314">Inteface.ts:314</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="github" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> github</h3>
-					<div class="tsd-signature tsd-kind-icon">github<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="developer_data" class="tsd-anchor"></a>
+					<h3>developer_<wbr>data</h3>
+					<div class="tsd-signature tsd-kind-icon">developer_<wbr>data<span class="tsd-signature-symbol">:</span> <a href="inteface.developerdata.html" class="tsd-signature-type" data-tsd-kind="Interface">DeveloperData</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L159">Inteface.ts:159</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L315">Inteface.ts:315</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="inteface.basiccoin.html">BasicCoin</a>.<a href="inteface.basiccoin.html#id">id</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L32">Inteface.ts:32</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="image" class="tsd-anchor"></a>
+					<h3>image</h3>
+					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <a href="inteface.image.html" class="tsd-signature-type" data-tsd-kind="Interface">Image</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L312">Inteface.ts:312</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="localization" class="tsd-anchor"></a>
+					<h3>localization</h3>
+					<div class="tsd-signature tsd-kind-icon">localization<span class="tsd-signature-symbol">:</span> <a href="inteface.localization.html" class="tsd-signature-type" data-tsd-kind="Interface">Localization</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L311">Inteface.ts:311</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="market_data" class="tsd-anchor"></a>
+					<h3>market_<wbr>data</h3>
+					<div class="tsd-signature tsd-kind-icon">market_<wbr>data<span class="tsd-signature-symbol">:</span> <a href="inteface.marketdata.html" class="tsd-signature-type" data-tsd-kind="Interface">MarketData</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L313">Inteface.ts:313</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="inteface.basiccoin.html">BasicCoin</a>.<a href="inteface.basiccoin.html#name">name</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L33">Inteface.ts:33</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="public_interest_stats" class="tsd-anchor"></a>
+					<h3>public_<wbr>interest_<wbr>stats</h3>
+					<div class="tsd-signature tsd-kind-icon">public_<wbr>interest_<wbr>stats<span class="tsd-signature-symbol">:</span> <a href="inteface.publicintereststats.html" class="tsd-signature-type" data-tsd-kind="Interface">PublicInterestStats</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L316">Inteface.ts:316</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="symbol" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> symbol</h3>
+					<div class="tsd-signature tsd-kind-icon">symbol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="inteface.basiccoin.html">BasicCoin</a>.<a href="inteface.basiccoin.html#symbol">symbol</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L34">Inteface.ts:34</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -151,9 +236,42 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.coinfullinfo.html" class="tsd-kind-icon">Coin<wbr>Full<wbr>Info</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.coinhistoryresponse.html" class="tsd-kind-icon">Coin<wbr>History<wbr>Response</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.coinhistoryresponse.html#community_data" class="tsd-kind-icon">community_<wbr>data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.coinhistoryresponse.html#developer_data" class="tsd-kind-icon">developer_<wbr>data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="inteface.coinhistoryresponse.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.coinhistoryresponse.html#image" class="tsd-kind-icon">image</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.coinhistoryresponse.html#localization" class="tsd-kind-icon">localization</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.coinhistoryresponse.html#market_data" class="tsd-kind-icon">market_<wbr>data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="inteface.coinhistoryresponse.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.coinhistoryresponse.html#public_interest_stats" class="tsd-kind-icon">public_<wbr>interest_<wbr>stats</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="inteface.coinhistoryresponse.html#symbol" class="tsd-kind-icon">symbol</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.coinlistresponseitem.html" class="tsd-kind-icon">Coin<wbr>List<wbr>Response<wbr>Item</a>
 					</li>
@@ -214,21 +332,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.publicintereststats.html" class="tsd-kind-icon">Public<wbr>Interest<wbr>Stats</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.reposurl.html" class="tsd-kind-icon">ReposURL</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.reposurl.html#bitbucket" class="tsd-kind-icon">bitbucket</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.reposurl.html#github" class="tsd-kind-icon">github</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.simplepriceresponse.html" class="tsd-kind-icon">Simple<wbr>Price<wbr>Response</a>
 					</li>

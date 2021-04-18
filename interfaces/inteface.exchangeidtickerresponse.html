@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ReposURL | coingecko-api-v3</title>
+	<title>ExchangeIdTickerResponse | coingecko-api-v3</title>
 	<meta name="description" content="Documentation for coingecko-api-v3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/inteface.html">Inteface</a>
 				</li>
 				<li>
-					<a href="inteface.reposurl.html">ReposURL</a>
+					<a href="inteface.exchangeidtickerresponse.html">ExchangeIdTickerResponse</a>
 				</li>
 			</ul>
-			<h1>Interface ReposURL</h1>
+			<h1>Interface ExchangeIdTickerResponse</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ReposURL</span>
+						<span class="target">ExchangeIdTickerResponse</span>
 					</li>
 				</ul>
 			</section>
@@ -83,8 +83,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.reposurl.html#bitbucket" class="tsd-kind-icon">bitbucket</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.reposurl.html#github" class="tsd-kind-icon">github</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchangeidtickerresponse.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchangeidtickerresponse.html#tickers" class="tsd-kind-icon">tickers</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,22 +93,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="bitbucket" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bitbucket</h3>
-					<div class="tsd-signature tsd-kind-icon">bitbucket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L160">Inteface.ts:160</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L381">Inteface.ts:381</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="github" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> github</h3>
-					<div class="tsd-signature tsd-kind-icon">github<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="tickers" class="tsd-anchor"></a>
+					<h3>tickers</h3>
+					<div class="tsd-signature tsd-kind-icon">tickers<span class="tsd-signature-symbol">:</span> <a href="inteface.ticker.html" class="tsd-signature-type" data-tsd-kind="Interface">Ticker</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L159">Inteface.ts:159</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/4425566/src/Inteface.ts#L382">Inteface.ts:382</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -184,9 +184,21 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.exchangeid.html" class="tsd-kind-icon">Exchange<wbr>Id</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.exchangeidtickerresponse.html" class="tsd-kind-icon">Exchange<wbr>IdTicker<wbr>Response</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.exchangeidtickerresponse.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="inteface.exchangeidtickerresponse.html#tickers" class="tsd-kind-icon">tickers</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.image.html" class="tsd-kind-icon">Image</a>
 					</li>
@@ -214,21 +226,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.publicintereststats.html" class="tsd-kind-icon">Public<wbr>Interest<wbr>Stats</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.reposurl.html" class="tsd-kind-icon">ReposURL</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.reposurl.html#bitbucket" class="tsd-kind-icon">bitbucket</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.reposurl.html#github" class="tsd-kind-icon">github</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="inteface.simplepriceresponse.html" class="tsd-kind-icon">Simple<wbr>Price<wbr>Response</a>
 					</li>
