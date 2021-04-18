@@ -1,29 +1,50 @@
 import axios, { AxiosInstance } from 'axios';
 import qs from 'qs';
 import { API_ROUTES, PLATFORMS } from './Enum';
-import { CoinListResponseItem, CoinMarket, PingResponse, TrendingResponse, SimplePriceResponse, TokenPriceResponse, CoinFullInfo, CoinTickerResponse, CoinHistoryResponse, CoinMarketChartResponse, CoinStatusUpdateResponse, Exchange, NameIdPair, ExchangeId, ExchangeIdTickerResponse, StatusUpdate } from './Inteface';
+import {
+  CoinListResponseItem,
+  CoinMarket,
+  PingResponse,
+  TrendingResponse,
+  SimplePriceResponse,
+  TokenPriceResponse,
+  CoinFullInfo,
+  CoinTickerResponse,
+  CoinHistoryResponse,
+  CoinMarketChartResponse,
+  CoinStatusUpdateResponse,
+  Exchange,
+  NameIdPair,
+  ExchangeId,
+  ExchangeIdTickerResponse,
+  FinanceProduct,
+  FinancePlatform,
+} from './Inteface';
 
 export class CoinGeckoClient {
   http: AxiosInstance;
-  apiV3Url = 'https://api.coingecko.com/api/v3'
-  constructor() {
 
-    this.http = axios.create({})
+  apiV3Url = 'https://api.coingecko.com/api/v3'
+
+  constructor() {
+    this.http = axios.create({});
   }
+
   private withPathParams(path: string, replacements: any = {}) {
     let pathStr = path;
     Object.entries(replacements).forEach(([key, value]) => {
-      pathStr = pathStr.replace('{' + key + '}', value as string)
-    })
+      pathStr = pathStr.replace(`{${key}}`, value as string);
+    });
     return pathStr;
   }
 
   private async makeRequest<T>(action: API_ROUTES, params: any = {}) {
-    const requestUrl = this.apiV3Url + this.withPathParams(action, params) + '?' + qs.stringify(params);
-    console.log(requestUrl)
+    const requestUrl = `${this.apiV3Url + this.withPathParams(action, params)}?${qs.stringify(params)}`;
+    console.log(requestUrl);
     const res = await this.http.get<T>(requestUrl);
     return res.data;
   }
+
   /**
    * Check API server status
    * @returns {PingResponse}
@@ -31,6 +52,7 @@ export class CoinGeckoClient {
   public async ping() {
     return this.makeRequest<PingResponse>(API_ROUTES.PING);
   }
+
   public async trending() {
     return this.makeRequest<TrendingResponse>(API_ROUTES.SEARCH_TRENDING);
   }
@@ -81,7 +103,7 @@ valid values: true, false
    * You are responsible for managing how you want to display these information (e.g. footnote, different background, change opacity, hide)
    * @category Coin
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
-   * @param input.localization Include all localized languages in response (true/false) 
+   * @param input.localization Include all localized languages in response (true/false)
    * @param input.tickers nclude tickers data (true/false) [default: true]
    * @param input.market_data Include market_data (true/false) [default: true]
    * @param input.community_data Include community_data data (true/false) [default: true]
@@ -110,7 +132,7 @@ valid values: true, false
    * You are responsible for managing how you want to display these information (e.g. footnote, different background, change opacity, hide)
    * @category Coin
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
-   * @param input.exchange_ids filter results by exchange_ids (ref: v3/exchanges/list) 
+   * @param input.exchange_ids filter results by exchange_ids (ref: v3/exchanges/list)
    * @param input.include_exchange_logo flag to show exchange_logo
    * @param input.page Page through results
    * @param input.order valid values: trust_score_desc (default), trust_score_asc and volume_desc
@@ -133,7 +155,7 @@ valid values: true, false
    *
    * @category Coin
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
-   * @param input.date The date of data snapshot in dd-mm-yyyy eg. 30-12-2017 
+   * @param input.date The date of data snapshot in dd-mm-yyyy eg. 30-12-2017
    * @param input.localization Set to false to exclude localized languages in response
    * @returns {CoinHistoryResponse}
    */
@@ -148,7 +170,7 @@ valid values: true, false
   /**
    * Get historical market data include price, market cap, and 24h volume (granularity auto)
    * Minutely data will be used for duration within 1 day, Hourly data will be used for duration between 1 day and 90 days, Daily data will be used for duration above 90 days.
-   * 
+   *
    * @category Coin
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
    * @param input.vs_currency The target currency of market data (usd, eur, jpy, etc.)
@@ -168,7 +190,7 @@ valid values: true, false
   /**
    * Get historical market data include price, market cap, and 24h volume within a range of timestamp (granularity auto)
    * Minutely data will be used for duration within 1 day, Hourly data will be used for duration between 1 day and 90 days, Daily data will be used for duration above 90 days.
-   * 
+   *
    * @category Coin
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
    * @param input.vs_currency The target currency of market data (usd, eur, jpy, etc.)
@@ -187,7 +209,7 @@ valid values: true, false
 
   /**
    * Get status updates for a given coin (beta)
-   * 
+   *
    * @see https://www.coingecko.com/api/documentations/v3#/coins/get_coins__id__status_updates
    * @category Coin
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
@@ -304,7 +326,7 @@ valid values: true, false
   }
 
   /**
-  * Get historical market data include price, market cap, and 24h volume (granularity auto) from a contract address 
+  * Get historical market data include price, market cap, and 24h volume (granularity auto) from a contract address
   * @see https://www.coingecko.com/api/documentations/v3#/contract/get_coins__id__contract__contract_address_
   * @returns current data for a coin
   * @param input.id Asset platform (only ethereum is supported at this moment)
@@ -471,4 +493,35 @@ valid values: true, false
     return this.makeRequest<Array<Array<number>>>(API_ROUTES.EXCHANGE_ID_VOL_CHART, input);
   }
 
+  /**
+   * List all finance platforms
+   * @see https://www.coingecko.com/api/documentations/v3#/finance_(beta)/get_finance_platforms
+   * @param input.per_page Total results per page
+   * @param input.page Data up to number of days ago (eg. 1,14,30)
+   * @category Finance
+   * @returns {Finance[]}
+   */
+  public async financePlatforms(input?: {
+    per_page?: number,
+    page?: number,
+  }) {
+    return this.makeRequest<Array<FinancePlatform>>(API_ROUTES.FINANCE_PLATFORM, input);
+  }
+
+  /**
+   * List all finance products
+   * @see https://www.coingecko.com/api/documentations/v3#/finance_(beta)/get_finance_products
+   * @param input.per_page Total results per page
+   * @param input.page Data up to number of days ago (eg. 1,14,30)
+   * @category Finance
+   * @returns {Finance[]}
+   */
+  public async financeProducts(input?: {
+    per_page?: number,
+    page?: number,
+    start_at?: string,
+    end_at?: string;
+  }) {
+    return this.makeRequest<Array<FinanceProduct>>(API_ROUTES.FINANCE_PRODUCT, input);
+  }
 }

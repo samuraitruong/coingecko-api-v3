@@ -4,6 +4,19 @@ export interface PingResponse {
   gecko_says: string;
 }
 
+export interface BasicCoin {
+  id?: string;
+  name?: string;
+  symbol?: string;
+}
+
+export interface Coin extends BasicCoin {
+  market_cap_rank?: number;
+  thumb?: string;
+  large?: string;
+  score?: number;
+}
+
 export interface Exchange {
   id: string;
   name: string;
@@ -19,25 +32,23 @@ export interface Exchange {
   trade_volume_24h_btc_normalized: number;
 }
 
-export interface TrendingResponse {
-  coins?: Coins[];
-  exchanges?: Exchange[];
-}
-
-export interface Coins {
-  item?: Coin;
-}
-export interface BasicCoin {
+export interface TrendingItem {
   id?: string;
   name?: string;
   symbol?: string;
-}
-export interface Coin extends BasicCoin {
-
   market_cap_rank?: number;
   thumb?: string;
   large?: string;
   score?: number;
+}
+
+export interface Trending {
+  item?: TrendingItem;
+}
+
+export interface TrendingResponse {
+  coins?: Trending[];
+  exchanges?: Exchange[];
 }
 
 export interface CoinListResponseItem extends BasicCoin {
@@ -45,7 +56,6 @@ export interface CoinListResponseItem extends BasicCoin {
     [p: string]: string
   }
 }
-
 
 export interface CoinMarket extends BasicCoin {
   image?: string;
@@ -72,7 +82,6 @@ export interface CoinMarket extends BasicCoin {
   roi?: null;
   last_updated?: Date;
 }
-
 
 export interface SimplePriceResponse {
   [coin: string]: {
@@ -122,6 +131,12 @@ export interface CommunityData {
   reddit_accounts_active_48h?: number;
   telegram_channel_user_count?: number;
 }
+
+export interface CodeAdditionsDeletions4_Weeks {
+  additions?: number;
+  deletions?: number;
+}
+
 export interface DeveloperData {
   forks?: number;
   stars?: number;
@@ -135,9 +150,9 @@ export interface DeveloperData {
   last_4_weeks_commit_activity_series?: number[];
 }
 
-export interface CodeAdditionsDeletions4_Weeks {
-  additions?: number;
-  deletions?: number;
+export interface ReposURL {
+  github?: string[];
+  bitbucket?: any[];
 }
 
 export interface Links {
@@ -154,10 +169,6 @@ export interface Links {
   repos_url?: ReposURL;
 }
 
-export interface ReposURL {
-  github?: string[];
-  bitbucket?: any[];
-}
 export interface PublicInterestStats {
   alexa_rank?: number;
   bing_matches?: null;
@@ -240,7 +251,6 @@ export interface Image {
   large?: string;
 }
 
-
 export interface CoinFullInfo {
   id?: string;
   symbol?: string;
@@ -298,7 +308,7 @@ export interface Localization {
   ru: string;
   ja: string;
   zh: string;
-  "zh-tw": string;
+  'zh-tw': string;
   ko: string;
   ar: string;
   th: string;
@@ -315,16 +325,10 @@ export interface CoinHistoryResponse extends BasicCoin {
   public_interest_stats: PublicInterestStats;
 }
 
-
 export interface CoinMarketChartResponse {
   prices: Array<Array<number>>,
   market_caps: Array<Array<number>>,
   total_volumes: Array<Array<number>>
-}
-
-
-export interface CoinStatusUpdateResponse {
-  status_updates: StatusUpdate[];
 }
 
 export interface Project {
@@ -343,6 +347,10 @@ export interface StatusUpdate {
   user_title: string;
   pin: boolean;
   project: Project;
+}
+
+export interface CoinStatusUpdateResponse {
+  status_updates: StatusUpdate[];
 }
 
 export interface NameIdPair {
@@ -379,4 +387,25 @@ export interface ExchangeId {
 export interface ExchangeIdTickerResponse {
   name: string
   tickers: Ticker[]
+}
+
+export interface FinancePlatform {
+  name?: string;
+  facts?: string;
+  category?: string;
+  centralized?: boolean;
+  website_url?: string;
+}
+
+export interface FinanceProduct {
+  platform?: string;
+  identifier?: string;
+  supply_rate_percentage?: string;
+  borrow_rate_percentage?: null;
+  number_duration?: null;
+  length_duration?: null;
+  start_at?: number;
+  end_at?: number;
+  value_at?: number;
+  redeem_at?: number;
 }
