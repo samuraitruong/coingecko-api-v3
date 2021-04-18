@@ -409,3 +409,11 @@ export interface FinanceProduct {
   value_at?: number;
   redeem_at?: number;
 }
+
+export interface IndexItem {
+  name?: string;
+  id?: string;
+  market?: string;
+  last?: null;
+  is_multi_asset_composite?: null;
+}

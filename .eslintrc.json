@@ -4,9 +4,11 @@
     "es2020": true,
     "jest/globals": true
   },
-  "extends": ["airbnb-base", 
-  "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 11,
@@ -23,7 +25,8 @@
   "rules": {
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
-    "max-len": ["warn"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "max-len": ["warn", { "ignoreComments": true, "code": 140 }],
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "camelcase": ["off"],

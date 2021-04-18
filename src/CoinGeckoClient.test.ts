@@ -182,12 +182,31 @@ describe('CoinGeckoClient test', () => {
   });
 
   describe('Finance', () => {
-    it.only('/finance_platforms should successful', async () => {
+    it('/finance_platforms should successful', async () => {
       const platform = await client.financePlatforms({});
       expect(platform.length).toBeGreaterThan(0);
     });
 
-    it.only('/finance_products should successful', async () => {
+    it('/finance_products should successful', async () => {
+      const products = await client.financeProducts({});
+      expect(products.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe.only('Indexes', () => {
+    it('/indexes should successful', async () => {
+      const indexes = await client.indexes();
+      expect(indexes.length).toBeGreaterThan(0);
+      expect(indexes[0]).toEqual({
+        id: expect.any(String),
+        is_multi_asset_composite: null,
+        last: null,
+        market: expect.any(String),
+        name: expect.any(String),
+      });
+    });
+
+    it('/finance_products should successful', async () => {
       const products = await client.financeProducts({});
       expect(products.length).toBeGreaterThan(0);
     });

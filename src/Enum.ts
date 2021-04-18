@@ -23,7 +23,11 @@ export enum API_ROUTES {
   EXCHANGE_ID_STATUS_UPDATES = '/exchanges/{id}/status_updates',
   EXCHANGE_ID_VOL_CHART = '/exchanges/{id}/volume_chart',
   FINANCE_PLATFORM = '/finance_platforms',
-  FINANCE_PRODUCT = '/finance_products'
+  FINANCE_PRODUCT = '/finance_products',
+  INDEXES = '/indexes',
+  INDEXES_LIST = '/indexes/list',
+  INDEXES_MARKET_ID = '/indexes/{market_id}/{id}',
+  INDEXES_LIST_MARKET_AND_ID = '/indexes/list_by_market_and_id/{market_id}/{id}'
 }
 
 export type PLATFORMS = 'ethereum' | 'tron'

@@ -2,6 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import qs from 'qs';
 import { API_ROUTES, PLATFORMS } from './Enum';
 import {
+  IndexItem,
   CoinListResponseItem,
   CoinMarket,
   PingResponse,
@@ -30,7 +31,7 @@ export class CoinGeckoClient {
     this.http = axios.create({});
   }
 
-  private withPathParams(path: string, replacements: any = {}) {
+  private withPathParams(path: string, replacements: { [x: string]: string } = {}) {
     let pathStr = path;
     Object.entries(replacements).forEach(([key, value]) => {
       pathStr = pathStr.replace(`{${key}}`, value as string);
@@ -40,7 +41,6 @@ export class CoinGeckoClient {
 
   private async makeRequest<T>(action: API_ROUTES, params: any = {}) {
     const requestUrl = `${this.apiV3Url + this.withPathParams(action, params)}?${qs.stringify(params)}`;
-    console.log(requestUrl);
     const res = await this.http.get<T>(requestUrl);
     return res.data;
   }
@@ -523,5 +523,37 @@ valid values: true, false
     end_at?: string;
   }) {
     return this.makeRequest<Array<FinanceProduct>>(API_ROUTES.FINANCE_PRODUCT, input);
+  }
+
+  /**
+   * List all market indexes
+   * @see https://www.coingecko.com/api/documentations/v3#/indexes_(beta)/get_indexes
+   * @param input.per_page Total results per page
+   * @param input.page Data up to number of days ago (eg. 1,14,30)
+   * @category Indexes
+   * @returns {IndexItem[]}
+   */
+  public async indexes(input?: {
+    per_page?: number,
+    page?: number,
+  }) {
+    return this.makeRequest<IndexItem[]>(API_ROUTES.INDEXES, input);
+  }
+
+  /**
+   * get market index by market id and index id
+   * @see https://www.coingecko.com/api/documentations/v3#/indexes_(beta)/get_indexes__market_id___id_
+   * @param input.market_id pass the market id (can be obtained from /exchanges/list)
+   * @param input.path_id pass the index id (can be obtained from /indexes/list)
+   * @param input.id pass the index id (can be obtained from /indexes/list)
+   * @category Indexes
+   * @returns {IndexItem[]}
+   */
+  public async indexesMarketId(input?: {
+    market_id?: number,
+    path_id?: number,
+    id?: number
+  }) {
+    return this.makeRequest<IndexItem[]>(API_ROUTES.INDEXES_MARKET_ID, input);
   }
 }
