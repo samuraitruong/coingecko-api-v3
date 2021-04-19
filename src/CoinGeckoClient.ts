@@ -21,6 +21,10 @@ import {
   FinanceProduct,
   FinancePlatform,
   Derivative,
+  DerivativeExchange,
+  EventResponse,
+  EventCountryResponse,
+  ExchangeRatesResponse,
 } from './Inteface';
 
 export class CoinGeckoClient {
@@ -583,16 +587,117 @@ valid values: true, false
 
   /**
   * List all derivative tickers
-  * @see https://www.coingecko.com/api/documentations/v3#/derivatives_(beta)/get_derivatives
-  * @param input.include_tickers 'all’, ‘unexpired’] - expired to show unexpired tickers, all to list all tickers, defaults to unexpired
+  * @see https://www.coingecko.com/api/documentations/v3#/derivatives_(beta)/get_derivatives_exchanges
+  * @param input.order order results using following params name_asc，name_desc，open_interest_btc_asc，open_interest_btc_desc，trade_volume_24h_btc_asc，trade_volume_24h_btc_desc
+  * @param input.page Page through results
+  * @param input.per_page  Total results per page
   * @category Derivatives
-  * @returns {Derivative[]}
+  * @returns {DerivativeExchange[]}
   */
   public async derivativesExchanges(input: {
-    order?: string,
+    // eslint-disable-next-line max-len
+    order?: 'name_asc' | 'name_desc' | 'open_interest_btc_asc' | 'open_interest_btc_desc' | 'trade_volume_24h_btc_asc' | 'trade_volume_24h_btc_desc';
+
     per_page?: number,
     page?: number
   }) {
-    return this.makeRequest<Derivative[]>(API_ROUTES.DERIVATIVES_EXCHANGES, input);
+    return this.makeRequest<DerivativeExchange[]>(API_ROUTES.DERIVATIVES_EXCHANGES, input);
+  }
+
+  /**
+  * show derivative exchange data
+  * @see https://www.coingecko.com/api/documentations/v3#/derivatives_(beta)/get_derivatives_exchanges__id_
+  * @param input.id pass the exchange id (can be obtained from derivatives/exchanges/list) eg. bitmex
+  * @param input.include_tickers ['all’, ‘unexpired’] - expired to show unexpired tickers, all to list all tickers, leave blank to omit tickers data in response
+  * @category Derivatives
+  * @returns {DerivativeExchange[]}
+  */
+  public async derivativesExchangesId(input: {
+    id: string
+    include_tickers?: 'all' | 'unexpired',
+  }) {
+    return this.makeRequest<DerivativeExchange[]>(API_ROUTES.DERIVATIVES_EXCHANGES_ID, input);
+  }
+
+  /**
+  * List all derivative exchanges name and identifier
+  * @see https://www.coingecko.com/api/documentations/v3#/derivatives_(beta)/get_derivatives_exchanges_list
+  * @category Derivatives
+  * @returns {NameIdPair[]}
+  */
+  public async derivativesExchangesList() {
+    return this.makeRequest<NameIdPair[]>(API_ROUTES.DERIVATIVES_EXCHANGES_LIST);
+  }
+
+  /**
+  * List all status_updates with data (description, category, created_at, user, user_title and pin)
+  * @see https://www.coingecko.com/api/documentations/v3#/status_updates_(beta)/get_status_updates
+  * @param input.category Filtered by category (eg. general, milestone, partnership, exchange_listing, software_release, fund_movement, new_listings, event)
+  * @param input.project_type Filtered by Project Type (eg. coin, market). If left empty returns both status from coins and markets.
+  * @param input.per_page Total results per page
+  * @param input.page Page through results
+  * @category Status Updates
+  * @returns {CoinStatusUpdateResponse}
+  */
+  public async statusUpdates(input?: {
+    category?: string,
+    project_type?: string,
+    per_page?: number,
+    page?: number
+  }) {
+    return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.STATUS_UPDATES, input);
+  }
+
+  /**
+  * Get events, paginated by 100
+  * @see https://www.coingecko.com/api/documentations/v3#/events/get_events
+  * @param input.country_code country_code of event (eg. ‘US’). use /api/v3/events/countries for list of country_codes
+  * @param input.type ype of event (eg. ‘Conference’). use /api/v3/events/types for list of types
+  * @param input.page page of results (paginated by 100)
+  * @param input.upcoming_events_only lists only upcoming events.(defaults to true, set to false to list all events)
+  * @param input.from_date lists events after this date yyyy-mm-dd
+  * @param input.to_date lists events before this date yyyy-mm-dd (set upcoming_events_only to false if fetching past events)
+  * @category Events
+  * @returns {EventResponse}
+  */
+  public async events(input?: {
+    country_code?: string,
+    type?: string,
+    page?: number,
+    upcoming_events_only?: boolean,
+    from_date?: string,
+    to_date?: string
+  }) {
+    return this.makeRequest<EventResponse>(API_ROUTES.EVENTS, input);
+  }
+
+  /**
+  * Get list of event countries
+  * @see https://www.coingecko.com/api/documentations/v3#/events/get_events_countries
+  * @category Events
+  * @returns {EventCountryResponse}
+  */
+  public async eventsCountries() {
+    return this.makeRequest<EventCountryResponse>(API_ROUTES.EVENTS_COUNTRIES);
+  }
+
+  /**
+  * Get list of events types
+  * @see https://www.coingecko.com/api/documentations/v3#/events/get_events_types
+  * @category Events
+  * @returns {EventCountryResponse}
+  */
+  public async eventsTypes() {
+    return this.makeRequest<EventCountryResponse>(API_ROUTES.EVENTS_TYPES);
+  }
+
+  /**
+  * Get BTC-to-Currency exchange rates
+  * @see https://www.coingecko.com/api/documentations/v3#/exchange_rates/get_exchange_rates
+  * @category Exchange Rates
+  * @returns {ExchangeRatesResponse}
+  */
+  public async exchangeRates() {
+    return this.makeRequest<ExchangeRatesResponse>(API_ROUTES.EXCHANGE_RATES);
   }
 }

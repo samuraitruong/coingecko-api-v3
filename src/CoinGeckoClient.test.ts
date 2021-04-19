@@ -21,81 +21,88 @@ describe('CoinGeckoClient test', () => {
       thumb: expect.any(String),
     }));
   });
-
-  it('/coins/list should successful', async () => {
-    const list = await client.coinList({ include_platform: true });
-    expect(list.length).toBeGreaterThan(1);
-  });
-
-  it('/coins/market should successful', async () => {
-    const list = await client.coinMarket({ vs_currency: 'usd', ids: 'origin-protocol,bitcorn' });
-    expect(list.length).toEqual(2);
-    expect(list).toMatchSnapshot();
-  });
-
-  it('/coins/{id}/tickers should successful', async () => {
-    const ticker = await client.coinTickers({ id: 'origin-protocol' });
-    expect(ticker.name).toEqual('Origin Protocol');
-    expect(ticker.tickers.length).toBeGreaterThan(0);
-  });
-
-  it('/coins/{id}/history should successful', async () => {
-    const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021' });
-    expect(coin.name).toEqual('Bitcoin');
-    expect(coin.localization).not.toBeNull();
-    expect(coin).toMatchSnapshot();
-  });
-
-  it('/coins/{id}/history should successful with no localization', async () => {
-    const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021', localization: false });
-    expect(coin.name).toEqual('Bitcoin');
-    expect(coin.localization).toEqual(undefined);
-  });
-
-  it('/coins/{id}/market_chart should successful', async () => {
-    const marketChart = await client.coinMarketChart({
-      id: 'bitcoin', vs_currency: 'aud', interval: 'hourly', days: 1,
+  describe('coins', () => {
+    it('/coins/list should successful', async () => {
+      const list = await client.coinList({ include_platform: true });
+      expect(list.length).toBeGreaterThan(1);
     });
-    expect(marketChart.prices.length).toBeGreaterThan(12);
-    expect(marketChart.prices[0].length).toBe(2);
-    expect(marketChart.prices[0][0]).toBeGreaterThan(0);
-    expect(marketChart.prices[0][1]).toBeGreaterThan(0);
-  });
 
-  it('/coins/{id}/market_chart/range should successful', async () => {
-    const marketChart = await client.coinMarketChartRange({
-      id: 'bitcoin', vs_currency: 'aud', from: 1392577232, to: 1618716149,
+    it('/coins/market should successful', async () => {
+      const list = await client.coinMarket({ vs_currency: 'usd', ids: 'origin-protocol,bitcorn' });
+      expect(list.length).toEqual(2);
+      expect(list).toMatchSnapshot();
     });
-    expect(marketChart.prices.length).toBeGreaterThan(12);
-    expect(marketChart.prices[0].length).toBe(2);
-    expect(marketChart.prices[0][0]).toBeGreaterThan(0);
-    expect(marketChart.prices[0][1]).toBeGreaterThan(0);
-  });
 
-  it('/coins/{id}/status_updates should successful', async () => {
-    const statusUpdate = await client.coinStatusUpdates({ id: 'litecoin' });
-    expect(statusUpdate.status_updates.length).toBeGreaterThan(0);
-  });
+    it('/coins/{id}/tickers should successful', async () => {
+      const ticker = await client.coinTickers({ id: 'origin-protocol' });
+      expect(ticker.name).toEqual('Origin Protocol');
+      expect(ticker.tickers.length).toBeGreaterThan(0);
+    });
 
-  it('/coins/{id}/ohlc should successful', async () => {
-    const ohlc = await client.coinOHLC({ id: 'litecoin', vs_currency: 'aud', days: 30 });
-    expect(ohlc.length).toBeGreaterThan(0);
-    expect(ohlc[0].length).toBe(5);
-  });
+    it('/coins/{id}/history should successful', async () => {
+      const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021' });
+      expect(coin.name).toEqual('Bitcoin');
+      expect(coin.localization).not.toBeNull();
+      expect(coin).toMatchSnapshot();
+    });
 
-  it('/simple/market should successful', async () => {
-    const price = await client.simpleTokenPrice({ contract_addresses: '0x8207c1ffc5b6804f6024322ccf34f29c3541ae26', id: 'ethereum', vs_currencies: 'btc,eth' });
-    expect(price).toMatchObject({
-      '0x8207c1ffc5b6804f6024322ccf34f29c3541ae26': {
-        btc: expect.any(Number),
-        eth: expect.any(Number),
-      },
+    it('/coins/{id}/history should successful with no localization', async () => {
+      const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021', localization: false });
+      expect(coin.name).toEqual('Bitcoin');
+      expect(coin.localization).toEqual(undefined);
+    });
+
+    it('/coins/{id}/market_chart should successful', async () => {
+      const marketChart = await client.coinMarketChart({
+        id: 'bitcoin', vs_currency: 'aud', interval: 'hourly', days: 1,
+      });
+      expect(marketChart.prices.length).toBeGreaterThan(12);
+      expect(marketChart.prices[0].length).toBe(2);
+      expect(marketChart.prices[0][0]).toBeGreaterThan(0);
+      expect(marketChart.prices[0][1]).toBeGreaterThan(0);
+    });
+
+    it('/coins/{id}/market_chart/range should successful', async () => {
+      const marketChart = await client.coinMarketChartRange({
+        id: 'bitcoin', vs_currency: 'aud', from: 1392577232, to: 1618716149,
+      });
+      expect(marketChart.prices.length).toBeGreaterThan(12);
+      expect(marketChart.prices[0].length).toBe(2);
+      expect(marketChart.prices[0][0]).toBeGreaterThan(0);
+      expect(marketChart.prices[0][1]).toBeGreaterThan(0);
+    });
+
+    it('/coins/{id}/status_updates should successful', async () => {
+      const statusUpdate = await client.coinStatusUpdates({ id: 'litecoin' });
+      expect(statusUpdate.status_updates.length).toBeGreaterThan(0);
+    });
+
+    it('/coins/{id}/ohlc should successful', async () => {
+      const ohlc = await client.coinOHLC({ id: 'litecoin', vs_currency: 'aud', days: 30 });
+      expect(ohlc.length).toBeGreaterThan(0);
+      expect(ohlc[0].length).toBe(5);
     });
   });
 
-  it('/simple/supported_vs_currencies should successful', async () => {
-    const list = await client.simpleSupportedCurrencies();
-    expect(list).toMatchSnapshot();
+  describe('simple', () => {
+    it('/simple/market should successful', async () => {
+      const price = await client.simpleTokenPrice({
+        contract_addresses: '0x8207c1ffc5b6804f6024322ccf34f29c3541ae26',
+        id: 'ethereum',
+        vs_currencies: 'btc,eth',
+      });
+      expect(price).toMatchObject({
+        '0x8207c1ffc5b6804f6024322ccf34f29c3541ae26': {
+          btc: expect.any(Number),
+          eth: expect.any(Number),
+        },
+      });
+    });
+
+    it('/simple/supported_vs_currencies should successful', async () => {
+      const list = await client.simpleSupportedCurrencies();
+      expect(list).toMatchSnapshot();
+    });
   });
   describe('Contract', () => {
     it('/coins/{id}/contract/{contract_address} should successful', async () => {
@@ -193,7 +200,7 @@ describe('CoinGeckoClient test', () => {
     });
   });
 
-  describe.only('Indexes', () => {
+  describe('Indexes', () => {
     it('/indexes should successful', async () => {
       const indexes = await client.indexes();
       expect(indexes.length).toBeGreaterThan(0);
@@ -213,9 +220,62 @@ describe('CoinGeckoClient test', () => {
   });
 
   describe('Derivatives', () => {
-    it.only('/derivatives should successful', async () => {
+    it('/derivatives should successful', async () => {
       const list = await client.derivatives({ include_tickers: 'all' });
       expect(list.length).toBeGreaterThan(0);
+    });
+
+    it('/derivatives/exchanges should successful', async () => {
+      const list = await client.derivativesExchanges({ order: 'name_asc', per_page: 10 });
+      expect(list.length).toBeGreaterThan(0);
+    });
+
+    it('/derivatives/exchanges/id should successful', async () => {
+      const list = await client.derivativesExchangesId({ id: 'bitmex' });
+      expect(list.length).toBeGreaterThan(0);
+    });
+
+    it('/derivatives/exchanges/list should successful', async () => {
+      const list = await client.derivativesExchangesList();
+      expect(list.length).toBeGreaterThan(0);
+      expect(list[0]).toEqual({
+        name: expect.any(String),
+        id: expect.any(String),
+      });
+    });
+  });
+  describe('Status Updates', () => {
+    it('/status_updates', async () => {
+      const list = await client.statusUpdates();
+      expect(list.status_updates.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('Events', () => {
+    it('/events', async () => {
+      const list = await client.events();
+      expect(list.data.length).toBeGreaterThan(0);
+    });
+
+    it.only('/events/countries', async () => {
+      const list = await client.eventsCountries();
+      expect(list.data.length).toBeGreaterThan(0);
+      expect(list.data[2]).toEqual({
+        country: expect.any(String),
+        code: expect.any(String),
+      });
+    });
+
+    it.only('/events/types', async () => {
+      const list = await client.eventsTypes();
+      expect(list).toMatchSnapshot();
+    });
+  });
+
+  describe('Exchange Rates', () => {
+    it('/events', async () => {
+      const list = await client.exchangeRates();
+      expect(list.rates).not.toBeNull();
     });
   });
 });

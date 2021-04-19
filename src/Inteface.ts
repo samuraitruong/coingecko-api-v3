@@ -434,3 +434,48 @@ export interface Derivative {
   last_traded_at?: number;
   expired_at?: null;
 }
+
+export interface DerivativeExchange {
+  name?: string;
+  id?: string;
+  open_interest_btc?: number;
+  trade_volume_24h_btc?: string;
+  number_of_perpetual_pairs?: number;
+  number_of_futures_pairs?: number;
+  image?: string;
+  year_established?: number;
+  country?: string;
+  description?: string;
+  url?: string;
+}
+
+export interface Country {
+  country: string,
+  code: string
+}
+
+export interface EventCountryResponse {
+  data: Country[]
+}
+
+export interface EventResponse {
+  data: any[],
+  count: number;
+  page: number
+}
+
+export interface EventsTypeResponse {
+  data: string[],
+  count: number;
+}
+
+export interface ExchangeRatesResponse {
+  rates: {
+    [x: string]: {
+      name: string,
+      type: string,
+      value: number,
+      unit: string
+    }
+  }
+}

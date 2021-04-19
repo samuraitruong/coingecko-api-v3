@@ -29,7 +29,14 @@ export enum API_ROUTES {
   INDEXES_MARKET_ID = '/indexes/{market_id}/{id}',
   INDEXES_LIST_MARKET_AND_ID = '/indexes/list_by_market_and_id/{market_id}/{id}',
   DERIVATIVES = '/derivatives',
-  DERIVATIVES_EXCHANGES = '/derivatives/exchanges'
+  DERIVATIVES_EXCHANGES = '/derivatives/exchanges',
+  DERIVATIVES_EXCHANGES_ID = '/derivatives/exchanges/{id}',
+  DERIVATIVES_EXCHANGES_LIST = '/derivatives/exchanges/list',
+  STATUS_UPDATES = '/status_updates',
+  EVENTS = '/events',
+  EVENTS_COUNTRIES = '/events/countries',
+  EVENTS_TYPES = '/events/types',
+  EXCHANGE_RATES = '/exchange_rates'
 }
 
 export type PLATFORMS = 'ethereum' | 'tron'
