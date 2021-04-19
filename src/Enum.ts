@@ -27,7 +27,9 @@ export enum API_ROUTES {
   INDEXES = '/indexes',
   INDEXES_LIST = '/indexes/list',
   INDEXES_MARKET_ID = '/indexes/{market_id}/{id}',
-  INDEXES_LIST_MARKET_AND_ID = '/indexes/list_by_market_and_id/{market_id}/{id}'
+  INDEXES_LIST_MARKET_AND_ID = '/indexes/list_by_market_and_id/{market_id}/{id}',
+  DERIVATIVES = '/derivatives',
+  DERIVATIVES_EXCHANGES = '/derivatives/exchanges'
 }
 
 export type PLATFORMS = 'ethereum' | 'tron'

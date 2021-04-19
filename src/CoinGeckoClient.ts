@@ -20,6 +20,7 @@ import {
   ExchangeIdTickerResponse,
   FinanceProduct,
   FinancePlatform,
+  Derivative,
 } from './Inteface';
 
 export class CoinGeckoClient {
@@ -555,5 +556,43 @@ valid values: true, false
     id?: number
   }) {
     return this.makeRequest<IndexItem[]>(API_ROUTES.INDEXES_MARKET_ID, input);
+  }
+
+  /**
+  * list market indexes id and name
+  * @see https://www.coingecko.com/api/documentations/v3#/indexes_(beta)/get_indexes_list
+  * @category Indexes
+  * @returns {NameIdPair[]}
+  */
+  public async indexesList() {
+    return this.makeRequest<NameIdPair[]>(API_ROUTES.INDEXES_LIST);
+  }
+
+  /**
+  * List all derivative tickers
+  * @see https://www.coingecko.com/api/documentations/v3#/derivatives_(beta)/get_derivatives
+  * @param input.include_tickers 'all’, ‘unexpired’] - expired to show unexpired tickers, all to list all tickers, defaults to unexpired
+  * @category Derivatives
+  * @returns {Derivative[]}
+  */
+  public async derivatives(input: {
+    include_tickers?: 'all' | 'unexpired'
+  }) {
+    return this.makeRequest<Derivative[]>(API_ROUTES.DERIVATIVES, input);
+  }
+
+  /**
+  * List all derivative tickers
+  * @see https://www.coingecko.com/api/documentations/v3#/derivatives_(beta)/get_derivatives
+  * @param input.include_tickers 'all’, ‘unexpired’] - expired to show unexpired tickers, all to list all tickers, defaults to unexpired
+  * @category Derivatives
+  * @returns {Derivative[]}
+  */
+  public async derivativesExchanges(input: {
+    order?: string,
+    per_page?: number,
+    page?: number
+  }) {
+    return this.makeRequest<Derivative[]>(API_ROUTES.DERIVATIVES_EXCHANGES, input);
   }
 }

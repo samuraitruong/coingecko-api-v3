@@ -206,9 +206,16 @@ describe('CoinGeckoClient test', () => {
       });
     });
 
-    it('/finance_products should successful', async () => {
-      const products = await client.financeProducts({});
-      expect(products.length).toBeGreaterThan(0);
+    it('/indexes/list should successful', async () => {
+      const list = await client.indexesList();
+      expect(list.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('Derivatives', () => {
+    it.only('/derivatives should successful', async () => {
+      const list = await client.derivatives({ include_tickers: 'all' });
+      expect(list.length).toBeGreaterThan(0);
     });
   });
 });
