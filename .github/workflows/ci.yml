@@ -6,9 +6,15 @@ name: Node.js Package
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - main
+      - '*'
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +23,7 @@ jobs:
         with:
           node-version: 14
       - run: npm run lint
-      
+
   build:
     runs-on: ubuntu-latest
     steps:
