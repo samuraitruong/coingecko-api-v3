@@ -4,6 +4,9 @@ export interface PingResponse {
   gecko_says: string;
 }
 
+export interface ResponseWithData<T> {
+  data: T
+}
 export interface BasicCoin {
   id?: string;
   name?: string;
@@ -479,3 +482,36 @@ export interface ExchangeRatesResponse {
     }
   }
 }
+
+export interface GlobalData {
+  active_cryptocurrencies: number;
+  upcoming_icos: number;
+  ongoing_icos: number;
+  ended_icos: number;
+  markets: number;
+  total_market_cap: { [key: string]: number };
+  total_volume: { [key: string]: number };
+  market_cap_percentage: { [key: string]: number };
+  market_cap_change_percentage_24h_usd: number;
+  updated_at: number;
+}
+
+export interface GlobalDefiData {
+  /**
+   * Defi Market Capitalization in USD
+   */
+  defi_market_cap: string;
+  /**
+   * Ethereum Market Capitalization in USD
+   */
+  eth_market_cap: string;
+  defi_to_eth_ratio: string;
+  trading_volume_24h: string;
+  defi_dominance: string;
+  top_coin_name: string;
+  top_coin_defi_dominance: number;
+}
+
+export type GlobalResponse = ResponseWithData<GlobalData>;
+
+export type GlobalDefiResponse = ResponseWithData<GlobalDefiData>;

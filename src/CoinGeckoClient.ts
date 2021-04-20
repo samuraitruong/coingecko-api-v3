@@ -1,5 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
-import qs from 'qs';
+import https from 'https';
 import { API_ROUTES, PLATFORMS } from './Enum';
 import {
   IndexItem,
@@ -25,16 +24,12 @@ import {
   EventResponse,
   EventCountryResponse,
   ExchangeRatesResponse,
+  GlobalResponse,
+  GlobalDefiResponse,
 } from './Inteface';
 
 export class CoinGeckoClient {
-  http: AxiosInstance;
-
   apiV3Url = 'https://api.coingecko.com/api/v3'
-
-  constructor() {
-    this.http = axios.create({});
-  }
 
   private withPathParams(path: string, replacements: { [x: string]: string } = {}) {
     let pathStr = path;
@@ -44,10 +39,47 @@ export class CoinGeckoClient {
     return pathStr;
   }
 
+  private async httpGet(url: string) {
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      timeout: 60000, // in ms
+    };
+
+    return new Promise((resolve, reject) => {
+      const req = https.request(url, options, (res) => {
+        if (res.statusCode as any < 200 || res.statusCode as any > 299) {
+          reject(new Error(`HTTP status code ${res.statusCode}`));
+        }
+
+        const body: any = [];
+        res.on('data', (chunk) => body.push(chunk));
+        res.on('end', () => {
+          const resString = Buffer.concat(body).toString();
+          resolve(resString);
+        });
+      });
+
+      req.on('error', (err) => {
+        reject(err);
+      });
+
+      req.on('timeout', () => {
+        req.destroy();
+        reject(new Error('Request time out'));
+      });
+
+      req.end();
+    });
+  }
+
   private async makeRequest<T>(action: API_ROUTES, params: any = {}) {
-    const requestUrl = `${this.apiV3Url + this.withPathParams(action, params)}?${qs.stringify(params)}`;
-    const res = await this.http.get<T>(requestUrl);
-    return res.data;
+    const qs = Object.entries(params).map(([key, value]) => `${key}=${value}`).join('&');
+    const requestUrl = `${this.apiV3Url + this.withPathParams(action, params)}?${qs}`;
+    const res = await this.httpGet(requestUrl);// await this.http.get<T>(requestUrl);
+    return JSON.parse(res as string) as T;
   }
 
   /**
@@ -610,13 +642,13 @@ valid values: true, false
   * @param input.id pass the exchange id (can be obtained from derivatives/exchanges/list) eg. bitmex
   * @param input.include_tickers ['all’, ‘unexpired’] - expired to show unexpired tickers, all to list all tickers, leave blank to omit tickers data in response
   * @category Derivatives
-  * @returns {DerivativeExchange[]}
+  * @returns {DerivativeExchange}
   */
   public async derivativesExchangesId(input: {
     id: string
     include_tickers?: 'all' | 'unexpired',
   }) {
-    return this.makeRequest<DerivativeExchange[]>(API_ROUTES.DERIVATIVES_EXCHANGES_ID, input);
+    return this.makeRequest<DerivativeExchange>(API_ROUTES.DERIVATIVES_EXCHANGES_ID, input);
   }
 
   /**
@@ -699,5 +731,25 @@ valid values: true, false
   */
   public async exchangeRates() {
     return this.makeRequest<ExchangeRatesResponse>(API_ROUTES.EXCHANGE_RATES);
+  }
+
+  /**
+  * Get cryptocurrency global data
+  * @see https://www.coingecko.com/api/documentations/v3#/global/get_global
+  * @category Global
+  * @returns {GlobalResponse} Get global data - total_volume, total_market_cap, ongoing icos etc
+  */
+  public async global() {
+    return this.makeRequest<GlobalResponse>(API_ROUTES.GLOBAL);
+  }
+
+  /**
+  * Get cryptocurrency global decentralized finance(defi) data
+  * @see https://www.coingecko.com/api/documentations/v3#/global/get_global
+  * @category Global
+  * @returns {GlobalDefiResponse} Get Top 100 Cryptocurrency Global Eecentralized Finance(defi) data
+  */
+  public async globalDefi() {
+    return this.makeRequest<GlobalDefiResponse>(API_ROUTES.GLOBAL_DEFI);
   }
 }

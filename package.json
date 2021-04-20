@@ -1,6 +1,6 @@
 {
   "name": "coingecko-api-v3",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The nodejs api library for accessing coingecko api v3 , develop with typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .ts --fix",
     "build": "rm -rf ./dist && tsc",
     "dev": "ts-node ./src/index",
-    "test": "jest",
+    "test": "jest --runInBand --verbose",
     "doc-gen": "rm -rf ./dist && typedoc --out ./docs src/",
     "prepublish": "npm run build",
     "publish-doc": "npm run doc-gen &&  gh-pages -d ./docs",
@@ -32,7 +32,6 @@
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.41",
-    "@types/qs": "^6.9.6",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.24.0",
@@ -47,10 +46,6 @@
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.35",
     "typescript": "^4.2.4"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "qs": "^6.5.2"
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix"

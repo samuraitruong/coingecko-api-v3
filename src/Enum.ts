@@ -36,7 +36,9 @@ export enum API_ROUTES {
   EVENTS = '/events',
   EVENTS_COUNTRIES = '/events/countries',
   EVENTS_TYPES = '/events/types',
-  EXCHANGE_RATES = '/exchange_rates'
+  EXCHANGE_RATES = '/exchange_rates',
+  GLOBAL = '/global',
+  GLOBAL_DEFI = '/global/decentralized_finance_defi'
 }
 
 export type PLATFORMS = 'ethereum' | 'tron'
