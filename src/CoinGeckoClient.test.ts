@@ -103,6 +103,15 @@ describe('CoinGeckoClient test', () => {
       const list = await client.simpleSupportedCurrencies();
       expect(list).toMatchSnapshot();
     });
+
+    it('/simple/prices should successful', async () => {
+      const list = await client.simplePrice({ vs_currencies: 'eth', ids: 'bitcoin' });
+      expect(list).toEqual({
+        bitcoin: {
+          eth: expect.any(Number),
+        },
+      });
+    });
   });
   describe('Contract', () => {
     it('/coins/{id}/contract/{contract_address} should successful', async () => {

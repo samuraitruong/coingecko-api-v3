@@ -51,7 +51,7 @@ export class CoinGeckoClient {
     return new Promise((resolve, reject) => {
       const req = https.request(url, options, (res) => {
         if (res.statusCode as any < 200 || res.statusCode as any > 299) {
-          reject(new Error(`HTTP status code ${res.statusCode}`));
+          // reject(new Error(`HTTP status code ${res.statusCode}`));
         }
 
         const body: any = [];
@@ -300,14 +300,14 @@ valid values: true, false
 
   /**
    * Get the current price of any cryptocurrencies in any other supported currencies that you need.
-   * @param input.vs_currency vs_currency of coins, comma-separated if querying more than 1 vs_currency. *refers to simple/supported_vs_currencies
+   * @param input.vs_currencies vs_currency of coins, comma-separated if querying more than 1 vs_currency. *refers to simple/supported_vs_currencies
    * @param input.ids The ids of the coin, comma separated crytocurrency symbols (base). refers to /coins/list. When left empty, returns numbers the coins observing the params limit and start
    * @param input.include_market_cap @default false
    * @returns {SimplePriceResponse}
    * @category Simple
    */
   public async simplePrice(input: {
-    vs_currency: string,
+    vs_currencies: string,
     ids: string,
     include_market_cap?: boolean,
     include_24hr_vol?: boolean,
