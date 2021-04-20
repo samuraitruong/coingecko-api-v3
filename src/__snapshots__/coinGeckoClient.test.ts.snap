@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CoinGeckoClient test Events /events/types 1`] = `
-Object {
-  "count": 3,
-  "data": Array [
-    "Event",
-    "Conference",
-    "Meetup",
-  ],
-}
-`;
-
-exports[`CoinGeckoClient test coins /coins/{id}/history should successful 1`] = `
+exports[`CoinGeckoClient test Coins /coins/{id}/history should successful 1`] = `
 Object {
   "community_data": Object {
     "facebook_likes": null,
@@ -263,7 +252,18 @@ Object {
 }
 `;
 
-exports[`CoinGeckoClient test simple /simple/supported_vs_currencies should successful 1`] = `
+exports[`CoinGeckoClient test Events /events/types 1`] = `
+Object {
+  "count": 3,
+  "data": Array [
+    "Event",
+    "Conference",
+    "Meetup",
+  ],
+}
+`;
+
+exports[`CoinGeckoClient test Simple /simple/supported_vs_currencies should successful 1`] = `
 Array [
   "btc",
   "eth",

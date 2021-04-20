@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .ts --fix",
     "build": "rm -rf ./dist && tsc",
     "dev": "ts-node ./src/index",
-    "test": "jest --runInBand --verbose",
+    "test": "jest --runInBand --verbose --silent=false",
     "doc-gen": "rm -rf ./dist && typedoc --out ./docs src/",
     "prepublish": "npm run build",
     "publish-doc": "npm run doc-gen &&  gh-pages -d ./docs",
@@ -49,5 +49,8 @@
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }

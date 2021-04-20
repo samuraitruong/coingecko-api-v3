@@ -1,7 +1,7 @@
 import { CoinGeckoClient } from './CoinGeckoClient';
 
 const client = new CoinGeckoClient();
-jest.setTimeout(60000);
+jest.setTimeout(30000);
 describe('CoinGeckoClient test', () => {
   it('ping should successful', async () => {
     const ping = await client.ping();
@@ -21,7 +21,7 @@ describe('CoinGeckoClient test', () => {
       thumb: expect.any(String),
     }));
   });
-  describe('coins', () => {
+  describe('Coins', () => {
     it('/coins/list should successful', async () => {
       const list = await client.coinList({ include_platform: true });
       expect(list.length).toBeGreaterThan(1);
@@ -84,7 +84,7 @@ describe('CoinGeckoClient test', () => {
     });
   });
 
-  describe('simple', () => {
+  describe('Simple', () => {
     it('/simple/market should successful', async () => {
       const price = await client.simpleTokenPrice({
         contract_addresses: '0x8207c1ffc5b6804f6024322ccf34f29c3541ae26',
