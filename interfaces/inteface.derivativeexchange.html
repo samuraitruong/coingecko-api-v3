@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Exchange | coingecko-api-v3</title>
+	<title>DerivativeExchange | coingecko-api-v3</title>
 	<meta name="description" content="Documentation for coingecko-api-v3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/inteface.html">Inteface</a>
 				</li>
 				<li>
-					<a href="inteface.exchange.html">Exchange</a>
+					<a href="inteface.derivativeexchange.html">DerivativeExchange</a>
 				</li>
 			</ul>
-			<h1>Interface Exchange</h1>
+			<h1>Interface DerivativeExchange</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Exchange</span>
+						<span class="target">DerivativeExchange</span>
 					</li>
 				</ul>
 			</section>
@@ -83,18 +83,17 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#country" class="tsd-kind-icon">country</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#has_trading_incentive" class="tsd-kind-icon">has_<wbr>trading_<wbr>incentive</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#image" class="tsd-kind-icon">image</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#trade_volume_24h_btc" class="tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#trade_volume_24h_btc_normalized" class="tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc_<wbr>normalized</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#trust_score" class="tsd-kind-icon">trust_<wbr>score</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#trust_score_rank" class="tsd-kind-icon">trust_<wbr>score_<wbr>rank</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#url" class="tsd-kind-icon">url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.exchange.html#year_established" class="tsd-kind-icon">year_<wbr>established</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#country" class="tsd-kind-icon">country</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#image" class="tsd-kind-icon">image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#number_of_futures_pairs" class="tsd-kind-icon">number_<wbr>of_<wbr>futures_<wbr>pairs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#number_of_perpetual_pairs" class="tsd-kind-icon">number_<wbr>of_<wbr>perpetual_<wbr>pairs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#open_interest_btc" class="tsd-kind-icon">open_<wbr>interest_<wbr>btc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#trade_volume_24h_btc" class="tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.derivativeexchange.html#year_established" class="tsd-kind-icon">year_<wbr>established</a></li>
 							</ul>
 						</section>
 					</div>
@@ -104,121 +103,111 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="country" class="tsd-anchor"></a>
-					<h3>country</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> country</h3>
 					<div class="tsd-signature tsd-kind-icon">country<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L27">Inteface.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L450">Inteface.ts:450</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="description" class="tsd-anchor"></a>
-					<h3>description</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> description</h3>
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L28">Inteface.ts:28</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="has_trading_incentive" class="tsd-anchor"></a>
-					<h3>has_<wbr>trading_<wbr>incentive</h3>
-					<div class="tsd-signature tsd-kind-icon">has_<wbr>trading_<wbr>incentive<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L31">Inteface.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L451">Inteface.ts:451</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L24">Inteface.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L443">Inteface.ts:443</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="image" class="tsd-anchor"></a>
-					<h3>image</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> image</h3>
 					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L30">Inteface.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L448">Inteface.ts:448</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L25">Inteface.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L442">Inteface.ts:442</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="number_of_futures_pairs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> number_<wbr>of_<wbr>futures_<wbr>pairs</h3>
+					<div class="tsd-signature tsd-kind-icon">number_<wbr>of_<wbr>futures_<wbr>pairs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L447">Inteface.ts:447</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="number_of_perpetual_pairs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> number_<wbr>of_<wbr>perpetual_<wbr>pairs</h3>
+					<div class="tsd-signature tsd-kind-icon">number_<wbr>of_<wbr>perpetual_<wbr>pairs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L446">Inteface.ts:446</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="open_interest_btc" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> open_<wbr>interest_<wbr>btc</h3>
+					<div class="tsd-signature tsd-kind-icon">open_<wbr>interest_<wbr>btc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L444">Inteface.ts:444</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="trade_volume_24h_btc" class="tsd-anchor"></a>
-					<h3>trade_<wbr>volume_<wbr>24h_<wbr>btc</h3>
-					<div class="tsd-signature tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> trade_<wbr>volume_<wbr>24h_<wbr>btc</h3>
+					<div class="tsd-signature tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L34">Inteface.ts:34</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="trade_volume_24h_btc_normalized" class="tsd-anchor"></a>
-					<h3>trade_<wbr>volume_<wbr>24h_<wbr>btc_<wbr>normalized</h3>
-					<div class="tsd-signature tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc_<wbr>normalized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L35">Inteface.ts:35</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="trust_score" class="tsd-anchor"></a>
-					<h3>trust_<wbr>score</h3>
-					<div class="tsd-signature tsd-kind-icon">trust_<wbr>score<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L32">Inteface.ts:32</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="trust_score_rank" class="tsd-anchor"></a>
-					<h3>trust_<wbr>score_<wbr>rank</h3>
-					<div class="tsd-signature tsd-kind-icon">trust_<wbr>score_<wbr>rank<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L33">Inteface.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L445">Inteface.ts:445</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="url" class="tsd-anchor"></a>
-					<h3>url</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> url</h3>
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L29">Inteface.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L452">Inteface.ts:452</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="year_established" class="tsd-anchor"></a>
-					<h3>year_<wbr>established</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> year_<wbr>established</h3>
 					<div class="tsd-signature tsd-kind-icon">year_<wbr>established<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L26">Inteface.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L449">Inteface.ts:449</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -252,43 +241,40 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="inteface.exchange.html" class="tsd-kind-icon">Exchange</a>
+						<a href="inteface.derivativeexchange.html" class="tsd-kind-icon">Derivative<wbr>Exchange</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#country" class="tsd-kind-icon">country</a>
+								<a href="inteface.derivativeexchange.html#country" class="tsd-kind-icon">country</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#description" class="tsd-kind-icon">description</a>
+								<a href="inteface.derivativeexchange.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#has_trading_incentive" class="tsd-kind-icon">has_<wbr>trading_<wbr>incentive</a>
+								<a href="inteface.derivativeexchange.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#id" class="tsd-kind-icon">id</a>
+								<a href="inteface.derivativeexchange.html#image" class="tsd-kind-icon">image</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#image" class="tsd-kind-icon">image</a>
+								<a href="inteface.derivativeexchange.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#name" class="tsd-kind-icon">name</a>
+								<a href="inteface.derivativeexchange.html#number_of_futures_pairs" class="tsd-kind-icon">number_<wbr>of_<wbr>futures_<wbr>pairs</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#trade_volume_24h_btc" class="tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc</a>
+								<a href="inteface.derivativeexchange.html#number_of_perpetual_pairs" class="tsd-kind-icon">number_<wbr>of_<wbr>perpetual_<wbr>pairs</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#trade_volume_24h_btc_normalized" class="tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc_<wbr>normalized</a>
+								<a href="inteface.derivativeexchange.html#open_interest_btc" class="tsd-kind-icon">open_<wbr>interest_<wbr>btc</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#trust_score" class="tsd-kind-icon">trust_<wbr>score</a>
+								<a href="inteface.derivativeexchange.html#trade_volume_24h_btc" class="tsd-kind-icon">trade_<wbr>volume_<wbr>24h_<wbr>btc</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#trust_score_rank" class="tsd-kind-icon">trust_<wbr>score_<wbr>rank</a>
+								<a href="inteface.derivativeexchange.html#url" class="tsd-kind-icon">url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#url" class="tsd-kind-icon">url</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.exchange.html#year_established" class="tsd-kind-icon">year_<wbr>established</a>
+								<a href="inteface.derivativeexchange.html#year_established" class="tsd-kind-icon">year_<wbr>established</a>
 							</li>
 						</ul>
 					</li>

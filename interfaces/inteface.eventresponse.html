@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Market | coingecko-api-v3</title>
+	<title>EventResponse | coingecko-api-v3</title>
 	<meta name="description" content="Documentation for coingecko-api-v3">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/inteface.html">Inteface</a>
 				</li>
 				<li>
-					<a href="inteface.market.html">Market</a>
+					<a href="inteface.eventresponse.html">EventResponse</a>
 				</li>
 			</ul>
-			<h1>Interface Market</h1>
+			<h1>Interface EventResponse</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Market</span>
+						<span class="target">EventResponse</span>
 					</li>
 				</ul>
 			</section>
@@ -83,9 +83,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.market.html#has_trading_incentive" class="tsd-kind-icon">has_<wbr>trading_<wbr>incentive</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.market.html#identifier" class="tsd-kind-icon">identifier</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.market.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.eventresponse.html#count" class="tsd-kind-icon">count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.eventresponse.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inteface.eventresponse.html#page" class="tsd-kind-icon">page</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,32 +94,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="has_trading_incentive" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> has_<wbr>trading_<wbr>incentive</h3>
-					<div class="tsd-signature tsd-kind-icon">has_<wbr>trading_<wbr>incentive<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="count" class="tsd-anchor"></a>
+					<h3>count</h3>
+					<div class="tsd-signature tsd-kind-icon">count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L228">Inteface.ts:228</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L466">Inteface.ts:466</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="identifier" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L227">Inteface.ts:227</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L465">Inteface.ts:465</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="page" class="tsd-anchor"></a>
+					<h3>page</h3>
+					<div class="tsd-signature tsd-kind-icon">page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L226">Inteface.ts:226</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/fe9e0b8/src/Inteface.ts#L467">Inteface.ts:467</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -153,16 +153,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="inteface.market.html" class="tsd-kind-icon">Market</a>
+						<a href="inteface.eventresponse.html" class="tsd-kind-icon">Event<wbr>Response</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.market.html#has_trading_incentive" class="tsd-kind-icon">has_<wbr>trading_<wbr>incentive</a>
+								<a href="inteface.eventresponse.html#count" class="tsd-kind-icon">count</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.market.html#identifier" class="tsd-kind-icon">identifier</a>
+								<a href="inteface.eventresponse.html#data" class="tsd-kind-icon">data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inteface.market.html#name" class="tsd-kind-icon">name</a>
+								<a href="inteface.eventresponse.html#page" class="tsd-kind-icon">page</a>
 							</li>
 						</ul>
 					</li>
