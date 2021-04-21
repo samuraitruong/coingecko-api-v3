@@ -458,6 +458,7 @@ export interface Country {
 }
 
 export interface EventCountryResponse {
+  count: number;
   data: Country[]
 }
 

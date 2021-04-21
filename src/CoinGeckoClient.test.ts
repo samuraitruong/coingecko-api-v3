@@ -30,7 +30,6 @@ describe('CoinGeckoClient test', () => {
     it('/coins/market should successful', async () => {
       const list = await client.coinMarket({ vs_currency: 'usd', ids: 'origin-protocol,bitcorn' });
       expect(list.length).toEqual(2);
-      // expect(list).toMatchSnapshot();
     });
 
     it('/coins/{id}/tickers should successful', async () => {
@@ -43,7 +42,6 @@ describe('CoinGeckoClient test', () => {
       const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021' });
       expect(coin.name).toEqual('Bitcoin');
       expect(coin.localization).not.toBeNull();
-      expect(coin).toMatchSnapshot();
     });
 
     it('/coins/{id}/history should successful with no localization', async () => {
@@ -101,7 +99,8 @@ describe('CoinGeckoClient test', () => {
 
     it('/simple/supported_vs_currencies should successful', async () => {
       const list = await client.simpleSupportedCurrencies();
-      expect(list).toMatchSnapshot();
+      expect(list.length).toBeGreaterThan(0);
+      expect(list.includes('btc')).toBeTruthy();
     });
 
     it('/simple/prices should successful', async () => {
@@ -288,7 +287,7 @@ describe('CoinGeckoClient test', () => {
 
     it('/events/types', async () => {
       const list = await client.eventsTypes();
-      expect(list).toMatchSnapshot();
+      expect(list.count).toBeGreaterThanOrEqual(0);
     });
   });
 
