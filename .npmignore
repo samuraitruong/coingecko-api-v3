@@ -3,3 +3,4 @@ docs/
 src/
 ./github/
 .eslintrc.json
+coverage/
