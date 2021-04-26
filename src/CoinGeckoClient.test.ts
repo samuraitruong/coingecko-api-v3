@@ -33,25 +33,25 @@ describe('CoinGeckoClient test', () => {
     });
 
     it('/coins/{id}/tickers should successful', async () => {
-      const ticker = await client.coinTickers({ id: 'origin-protocol' });
+      const ticker = await client.coinIdTickers({ id: 'origin-protocol' });
       expect(ticker.name).toEqual('Origin Protocol');
       expect(ticker.tickers.length).toBeGreaterThan(0);
     });
 
     it('/coins/{id}/history should successful', async () => {
-      const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021' });
+      const coin = await client.coinIdHistory({ id: 'bitcoin', date: '01-04-2021' });
       expect(coin.name).toEqual('Bitcoin');
       expect(coin.localization).not.toBeNull();
     });
 
     it('/coins/{id}/history should successful with no localization', async () => {
-      const coin = await client.coinHistory({ id: 'bitcoin', date: '01-04-2021', localization: false });
+      const coin = await client.coinIdHistory({ id: 'bitcoin', date: '01-04-2021', localization: false });
       expect(coin.name).toEqual('Bitcoin');
       expect(coin.localization).toEqual(undefined);
     });
 
     it('/coins/{id}/market_chart should successful', async () => {
-      const marketChart = await client.coinMarketChart({
+      const marketChart = await client.coinIdMarketChart({
         id: 'bitcoin', vs_currency: 'aud', interval: 'hourly', days: 1,
       });
       expect(marketChart.prices.length).toBeGreaterThan(12);
@@ -61,7 +61,7 @@ describe('CoinGeckoClient test', () => {
     });
 
     it('/coins/{id}/market_chart/range should successful', async () => {
-      const marketChart = await client.coinMarketChartRange({
+      const marketChart = await client.coinIdMarketChartRange({
         id: 'bitcoin', vs_currency: 'aud', from: 1392577232, to: 1618716149,
       });
       expect(marketChart.prices.length).toBeGreaterThan(12);
@@ -71,12 +71,12 @@ describe('CoinGeckoClient test', () => {
     });
 
     it('/coins/{id}/status_updates should successful', async () => {
-      const statusUpdate = await client.coinStatusUpdates({ id: 'litecoin' });
+      const statusUpdate = await client.coinIdStatusUpdates({ id: 'litecoin' });
       expect(statusUpdate.status_updates.length).toBeGreaterThan(0);
     });
 
     it('/coins/{id}/ohlc should successful', async () => {
-      const ohlc = await client.coinOHLC({ id: 'litecoin', vs_currency: 'aud', days: 30 });
+      const ohlc = await client.coinIdOHLC({ id: 'litecoin', vs_currency: 'aud', days: 30 });
       expect(ohlc.length).toBeGreaterThan(0);
       expect(ohlc[0].length).toBe(5);
     });
