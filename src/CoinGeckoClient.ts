@@ -148,7 +148,7 @@ valid values: true, false
    * @param input.sparkline Include sparkline 7 days data (eg. true, false)
    * @returns {CoinFullInfo}
    */
-  public async coin(input: {
+  public async coinId(input: {
     id: string,
     localization?: boolean,
     tickers?: boolean,
@@ -176,7 +176,7 @@ valid values: true, false
    * @param input.depth flag to show 2% orderbook depth. valid values: true, false
    * @returns {CoinFullInfo}
    */
-  public async coinTickers(input: {
+  public async coinIdTickers(input: {
     id: string,
     exchange_ids?: string,
     include_exchange_logo?: boolean,
@@ -196,7 +196,7 @@ valid values: true, false
    * @param input.localization Set to false to exclude localized languages in response
    * @returns {CoinHistoryResponse}
    */
-  public async coinHistory(input: {
+  public async coinIdHistory(input: {
     id: string,
     date: string,
     localization?: boolean,
@@ -215,7 +215,7 @@ valid values: true, false
    * @param input.interval Data interval. Possible value: daily
    * @returns {CoinMarketChartResponse}
    */
-  public async coinMarketChart(input: {
+  public async coinIdMarketChart(input: {
     id: string,
     vs_currency: string,
     days: number | 'max',
@@ -235,7 +235,7 @@ valid values: true, false
    * @param input.to To date in UNIX Timestamp (eg. 1618716149)
    * @returns {CoinMarketChartResponse}
    */
-  public async coinMarketChartRange(input: {
+  public async coinIdMarketChartRange(input: {
     id: string,
     vs_currency: string,
     from: number,
@@ -254,7 +254,7 @@ valid values: true, false
    * @param input.page Page through results
    * @returns {CoinStatusUpdateResponse}
    */
-  public async coinStatusUpdates(input: {
+  public async coinIdStatusUpdates(input: {
     id: string,
     per_page?: number,
     page?: number,
@@ -290,7 +290,7 @@ valid values: true, false
    * ]
    *```
    */
-  public async coinOHLC(input: {
+  public async coinIdOHLC(input: {
     id: string,
     vs_currency: string,
     days: number | 'max',
