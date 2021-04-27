@@ -1,5 +1,7 @@
 # coingecko-api-v3
 
+[![CI](https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml)
+
 The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies
 
 Official document here - https:/www.coingecko.com/api/documentations/v3
