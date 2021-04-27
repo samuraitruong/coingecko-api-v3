@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/samuraitruong/coingecko-api-v3/issues"
   },
-  "homepage": "https://github.com/samuraitruong/coingecko-api-v3#readme",
+  "homepage": "https://samuraitruong.github.io/coingecko-api-v3",
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.41",

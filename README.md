@@ -2,9 +2,9 @@
 
 The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies
 
-Official document here - https://www.coingecko.com/api/documentations/v3
+Official document here - https:/www.coingecko.com/api/documentations/v3
 
-API document generated - https://samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html
+API document generated - https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html
 
 ## Get started
 
@@ -18,21 +18,47 @@ const client = new CoinGeckoClient();
 const trendingSearch = await client.trendingSearch();
 ```
 
-## Methods
+## Supported API method
 
-| Method                          |                           function | tested |
-| ------------------------------- | ---------------------------------: | :----: |
-| /ping                           |                      client.ping() |   ✅   |
-| /simple/price                   |                client.simpePrice() |   ✅   |
-| /simple/token_price/:id         |             client.simplePriceId() |   ✅   |
-| /simple/supported_vs_currencies | client.simpleSupportedCurrencies() |   ✅   |
-| /coins/list                     |                  client.coinList() |   ✅   |
-| /coins/markets                  |               client.coinMarkets() |   ✅   |
-| /coins/:id                      |                    client.coinId() |   ✅   |
-| /coins/:id/tickers              |             client.coinIdTickers() |   ✅   |
-| /coins/:id/history              |             client.coinIdHistory() |   ✅   |
-| /coins/:id/market_history       |       client.coinIdMarketHistory() |   ✅   |
-| /coins/id/market_chart          |         client.coinIdMarketChart() |   ✅   |
-| /coins/{id}/market_chart/range  |    client.coinIdMarketChartRange() |   ✅   |
-| /coins/{id}/status_updates      |       client.coinIdStatusUpdates() |   ✅   |
-| /coins/{id}/ohlc                |                client.coinIdOHLC() |   ✅   |
+| Endpoint                                                   |                           function | tested? |
+| ---------------------------------------------------------- | ---------------------------------: | :-----: |
+| /ping                                                      |                      client.ping() |   ✅    |
+| /simple/price                                              |                client.simpePrice() |   ✅    |
+| /simple/token_price/:id                                    |             client.simplePriceId() |   ✅    |
+| /simple/supported_vs_currencies                            | client.simpleSupportedCurrencies() |   ✅    |
+| /coins/list                                                |                  client.coinList() |   ✅    |
+| /coins/markets                                             |               client.coinMarkets() |   ✅    |
+| /coins/:id                                                 |                    client.coinId() |   ✅    |
+| /coins/:id/tickers                                         |             client.coinIdTickers() |   ✅    |
+| /coins/:id/history                                         |             client.coinIdHistory() |   ✅    |
+| /coins/:id/market_history                                  |       client.coinIdMarketHistory() |   ✅    |
+| /coins/id/market_chart                                     |         client.coinIdMarketChart() |   ✅    |
+| /coins/{id}/market_chart/range                             |    client.coinIdMarketChartRange() |   ✅    |
+| /coins/{id}/status_updates                                 |       client.coinIdStatusUpdates() |   ✅    |
+| /coins/{id}/ohlc                                           |                client.coinIdOHLC() |   ✅    |
+| /coins/{id}/contract/{contract_address}                    |                  client.contract() |   ✅    |
+| /coins/{id}/contract/{contract_address}/market_chart/      |       client.contractMarketChart() |   ✅    |
+| /coins/{id}/contract/{contract_address}/market_chart/range |  client.contractMarketChartRange() |   ✅    |
+| /exchanges                                                 |                 client.exchanges() |   ✅    |
+| /exchanges/list                                            |              client.exchangeList() |   ✅    |
+| /exchanges/{id}/tickers                                    |         client.exchangeIdTickers() |   ✅    |
+| /exchanges/{id}/status_update                              |   client.exchangeIdStatusUpdates() |   ✅    |
+| /exchanges/{id}/volume_chart                               |     client.exchangeIdVolumeChart() |   ✅    |
+| /finance_platforms                                         |          client.financePlatforms() |   ✅    |
+| /finance_products                                          |           client.financeProducts() |   ✅    |
+| /indexes                                                   |                   client.indexes() |   ✅    |
+| /indexes/{market_id}/{id}                                  |           client.indexesMarketId() |   ✅    |
+| /indexes/list                                              |               client.indexesList() |   ✅    |
+| /indexes/list_by_market_and_id/{market_id}/{id}            |           client.financeProducts() |   ✅    |
+| /derivatives                                               |              client./derivatives() |   ✅    |
+| /derivatives/exchanges                                     |     client./derivativesExchanges() |   ✅    |
+| /derivatives/exchanges/{id}                                |   client./derivativesExchangesId() |   ✅    |
+| /status_updates                                            |             client.statusUpdates() |   ✅    |
+| /event                                                     |                    client.events() |   ✅    |
+| //events/countries                                         |            client.eventCountries() |   ✅    |
+| /events/types                                              |               client.eventsTypes() |   ✅    |
+| /exchange_rates                                            |             client.exhangesRates() |   ✅    |
+| /search/trending                                           |            client.searchTrending() |   ✅    |
+| /global                                                    |                    client.global() |   ✅    |
+| /status_updates                                            |             client.statusUpdates() |   ✅    |
+| //global/decentralized_finance_defi                        |                client.globalDefi() |   ✅    |
