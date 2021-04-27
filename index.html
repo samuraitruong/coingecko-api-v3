@@ -61,9 +61,10 @@
 				<a href="#coingecko-api-v3" id="coingecko-api-v3" style="color: inherit; text-decoration: none;">
 					<h1>coingecko-api-v3</h1>
 				</a>
-				<p>The nodejs api library for accessing coingecko api v3 , develop with typescript</p>
-				<p>Official document here - <a href="https://www.coingecko.com/api/documentations/v3">https://www.coingecko.com/api/documentations/v3</a>
-				API document generated - <a href="https://samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html">https://samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html</a></p>
+				<p><a href="https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml"><img src="https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a></p>
+				<p>The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies</p>
+				<p>Official document here - https:/<a href="http://www.coingecko.com/api/documentations/v3">www.coingecko.com/api/documentations/v3</a></p>
+				<p>API document generated - https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html</p>
 				<a href="#get-started" id="get-started" style="color: inherit; text-decoration: none;">
 					<h2>Get started</h2>
 				</a>
@@ -73,9 +74,218 @@
 				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">CoinGeckoClient</span><span style="color: #000000">();</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">trendingSearch</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #795E26">trendingSearch</span><span style="color: #000000">();</span>
 </code></pre>
-				<a href="#methods" id="methods" style="color: inherit; text-decoration: none;">
-					<h2>Methods</h2>
+				<a href="#supported-api-method" id="supported-api-method" style="color: inherit; text-decoration: none;">
+					<h2>Supported API method</h2>
 				</a>
+				<table>
+					<thead>
+						<tr>
+							<th>Endpoint</th>
+							<th align="right">function</th>
+							<th align="center">tested?</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>/ping</td>
+							<td align="right">client.ping()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/simple/price</td>
+							<td align="right">client.simpePrice()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/simple/token_price/:id</td>
+							<td align="right">client.simplePriceId()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/simple/supported_vs_currencies</td>
+							<td align="right">client.simpleSupportedCurrencies()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/list</td>
+							<td align="right">client.coinList()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/markets</td>
+							<td align="right">client.coinMarkets()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/:id</td>
+							<td align="right">client.coinId()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/:id/tickers</td>
+							<td align="right">client.coinIdTickers()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/:id/history</td>
+							<td align="right">client.coinIdHistory()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/:id/market_history</td>
+							<td align="right">client.coinIdMarketHistory()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/id/market_chart</td>
+							<td align="right">client.coinIdMarketChart()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/{id}/market_chart/range</td>
+							<td align="right">client.coinIdMarketChartRange()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/{id}/status_updates</td>
+							<td align="right">client.coinIdStatusUpdates()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/{id}/ohlc</td>
+							<td align="right">client.coinIdOHLC()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/{id}/contract/{contract_address}</td>
+							<td align="right">client.contract()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/{id}/contract/{contract_address}/market_chart/</td>
+							<td align="right">client.contractMarketChart()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/coins/{id}/contract/{contract_address}/market_chart/range</td>
+							<td align="right">client.contractMarketChartRange()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/exchanges</td>
+							<td align="right">client.exchanges()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/exchanges/list</td>
+							<td align="right">client.exchangeList()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/exchanges/{id}/tickers</td>
+							<td align="right">client.exchangeIdTickers()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/exchanges/{id}/status_update</td>
+							<td align="right">client.exchangeIdStatusUpdates()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/exchanges/{id}/volume_chart</td>
+							<td align="right">client.exchangeIdVolumeChart()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/finance_platforms</td>
+							<td align="right">client.financePlatforms()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/finance_products</td>
+							<td align="right">client.financeProducts()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/indexes</td>
+							<td align="right">client.indexes()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/indexes/{market_id}/{id}</td>
+							<td align="right">client.indexesMarketId()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/indexes/list</td>
+							<td align="right">client.indexesList()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/indexes/list_by_market_and_id/{market_id}/{id}</td>
+							<td align="right">client.financeProducts()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/derivatives</td>
+							<td align="right">client./derivatives()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/derivatives/exchanges</td>
+							<td align="right">client./derivativesExchanges()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/derivatives/exchanges/{id}</td>
+							<td align="right">client./derivativesExchangesId()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/status_updates</td>
+							<td align="right">client.statusUpdates()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/event</td>
+							<td align="right">client.events()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>//events/countries</td>
+							<td align="right">client.eventCountries()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/events/types</td>
+							<td align="right">client.eventsTypes()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/exchange_rates</td>
+							<td align="right">client.exhangesRates()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/search/trending</td>
+							<td align="right">client.searchTrending()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/global</td>
+							<td align="right">client.global()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>/status_updates</td>
+							<td align="right">client.statusUpdates()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
+							<td>//global/decentralized_finance_defi</td>
+							<td align="right">client.globalDefi()</td>
+							<td align="center">✅</td>
+						</tr>
+				</tbody></table>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
