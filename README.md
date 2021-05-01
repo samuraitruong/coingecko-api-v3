@@ -2,11 +2,15 @@
 
 [![CI](https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml)
 
+[![codecov](https://codecov.io/gh/samuraitruong/coingecko-api-v3/branch/main/graph/badge.svg?token=A7P9GCFGN2)](https://codecov.io/gh/samuraitruong/coingecko-api-v3)
+
 The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies
 
-Official document here - https:/www.coingecko.com/api/documentations/v3
+Official document here
+https:/www.coingecko.com/api/documentations/v3
 
-API document generated - https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html
+API document generated
+https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html
 
 ## Get started
 
