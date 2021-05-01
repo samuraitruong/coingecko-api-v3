@@ -16,9 +16,16 @@ npm install coingecko-api-v3
 ```
 
 ```js
-const client = new CoinGeckoClient();
+import { CoinGeckoClient } from 'coingecko-api-v3';
+const client = new CoinGeckoClient({
+  timeout: 10000,
+});
 const trendingSearch = await client.trendingSearch();
 ```
+
+## Options
+
+- timeout (optional): The http timeout, default 30s
 
 ## Supported API method
 

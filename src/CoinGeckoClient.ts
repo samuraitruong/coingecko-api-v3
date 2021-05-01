@@ -26,10 +26,26 @@ import {
   ExchangeRatesResponse,
   GlobalResponse,
   GlobalDefiResponse,
+  Options,
 } from './Inteface';
 
+/**
+ * The wrap client to access all api on coin gecko
+ */
 export class CoinGeckoClient {
   apiV3Url = 'https://api.coingecko.com/api/v3'
+
+  options: Options = {
+    timeout: 30000,
+  }
+
+  /**
+   * Constructor
+   * @param options the options passed for client library, at the moment only timeout are support
+   */
+  constructor(options?: Options) {
+    this.options = { ...this.options, ...options };
+  }
 
   private withPathParams(path: string, replacements: { [x: string]: string } = {}) {
     let pathStr = path;
@@ -39,22 +55,26 @@ export class CoinGeckoClient {
     return pathStr;
   }
 
+  /**
+   * Make HTTP request to the given endpoint
+   * @param url the full https URL
+   * @returns json content
+   */
   private async httpGet(url: string) {
     const options = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
-      timeout: 60000, // in ms
+      timeout: this.options.timeout, // in ms
     };
 
     return new Promise((resolve, reject) => {
       const req = https.request(url, options, (res) => {
-        if (res.statusCode as any < 200 || res.statusCode as any > 299) {
+        if (res.statusCode && (res.statusCode < 200 || res.statusCode > 299)) {
           // reject(new Error(`HTTP status code ${res.statusCode}`));
         }
-
-        const body: any = [];
+        const body: Array<Uint8Array> = [];
         res.on('data', (chunk) => body.push(chunk));
         res.on('end', () => {
           const resString = Buffer.concat(body).toString();
@@ -68,14 +88,20 @@ export class CoinGeckoClient {
 
       req.on('timeout', () => {
         req.destroy();
-        reject(new Error('Request time out'));
+        reject(new Error(`HTTP Request timeout after ${this.options.timeout}`));
       });
 
       req.end();
     });
   }
 
-  private async makeRequest<T>(action: API_ROUTES, params: any = {}) {
+  /**
+   * Generic function to make request use in internal function
+   * @param action
+   * @param params
+   * @returns
+   */
+  private async makeRequest<T>(action: API_ROUTES, params: { [key: string]: any } = {}) {
     const qs = Object.entries(params).map(([key, value]) => `${key}=${value}`).join('&');
     const requestUrl = `${this.apiV3Url + this.withPathParams(action, params)}?${qs}`;
     const res = await this.httpGet(requestUrl);// await this.http.get<T>(requestUrl);

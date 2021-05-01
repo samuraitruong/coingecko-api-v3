@@ -516,3 +516,7 @@ export interface GlobalDefiData {
 export type GlobalResponse = ResponseWithData<GlobalData>;
 
 export type GlobalDefiResponse = ResponseWithData<GlobalDefiData>;
+
+export interface Options {
+  timeout?: number
+}
