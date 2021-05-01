@@ -68,6 +68,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The wrap client to access all api on coin gecko</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -90,6 +97,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#apiv3url" class="tsd-kind-icon">api<wbr>V3Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="coingeckoclient.coingeckoclient-1.html#options" class="tsd-kind-icon">options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -181,12 +189,29 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Coin<wbr>Gecko<wbr>Client<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="coingeckoclient.coingeckoclient-1.html" class="tsd-signature-type" data-tsd-kind="Class">CoinGeckoClient</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Coin<wbr>Gecko<wbr>Client<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/inteface.options.html" class="tsd-signature-type" data-tsd-kind="Interface">Options</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="coingeckoclient.coingeckoclient-1.html" class="tsd-signature-type" data-tsd-kind="Class">CoinGeckoClient</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L40">CoinGeckoClient.ts:40</a></li>
+								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructor</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/inteface.options.html" class="tsd-signature-type" data-tsd-kind="Interface">Options</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the options passed for client library, at the moment only timeout are support</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="coingeckoclient.coingeckoclient-1.html" class="tsd-signature-type" data-tsd-kind="Class">CoinGeckoClient</a></h4>
 						</li>
 					</ul>
@@ -200,7 +225,17 @@
 					<div class="tsd-signature tsd-kind-icon">api<wbr>V3Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;https://api.coingecko.com/api/v3&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L32">CoinGeckoClient.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L36">CoinGeckoClient.ts:36</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="options" class="tsd-anchor"></a>
+					<h3>options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/inteface.options.html" class="tsd-signature-type" data-tsd-kind="Interface">Options</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L38">CoinGeckoClient.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -217,7 +252,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L151">CoinGeckoClient.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L177">CoinGeckoClient.ts:177</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -294,7 +329,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L199">CoinGeckoClient.ts:199</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L225">CoinGeckoClient.ts:225</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -342,7 +377,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L218">CoinGeckoClient.ts:218</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L244">CoinGeckoClient.ts:244</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -397,7 +432,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L238">CoinGeckoClient.ts:238</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L264">CoinGeckoClient.ts:264</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -452,7 +487,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L293">CoinGeckoClient.ts:293</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L319">CoinGeckoClient.ts:319</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -522,7 +557,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L257">CoinGeckoClient.ts:257</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L283">CoinGeckoClient.ts:283</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -575,7 +610,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L179">CoinGeckoClient.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L205">CoinGeckoClient.ts:205</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -645,7 +680,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L105">CoinGeckoClient.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L131">CoinGeckoClient.ts:131</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -683,7 +718,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L121">CoinGeckoClient.ts:121</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L147">CoinGeckoClient.ts:147</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -761,7 +796,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L374">CoinGeckoClient.ts:374</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L400">CoinGeckoClient.ts:400</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -809,7 +844,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L392">CoinGeckoClient.ts:392</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L418">CoinGeckoClient.ts:418</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -869,7 +904,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L413">CoinGeckoClient.ts:413</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L439">CoinGeckoClient.ts:439</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -938,7 +973,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L614">CoinGeckoClient.ts:614</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L640">CoinGeckoClient.ts:640</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -979,7 +1014,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L629">CoinGeckoClient.ts:629</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L655">CoinGeckoClient.ts:655</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1032,7 +1067,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L647">CoinGeckoClient.ts:647</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L673">CoinGeckoClient.ts:673</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1079,7 +1114,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L660">CoinGeckoClient.ts:660</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L686">CoinGeckoClient.ts:686</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1109,7 +1144,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L695">CoinGeckoClient.ts:695</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L721">CoinGeckoClient.ts:721</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1180,7 +1215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L712">CoinGeckoClient.ts:712</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L738">CoinGeckoClient.ts:738</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1207,7 +1242,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L722">CoinGeckoClient.ts:722</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L748">CoinGeckoClient.ts:748</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1237,7 +1272,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L465">CoinGeckoClient.ts:465</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L491">CoinGeckoClient.ts:491</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1280,7 +1315,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L509">CoinGeckoClient.ts:509</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L535">CoinGeckoClient.ts:535</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1334,7 +1369,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L488">CoinGeckoClient.ts:488</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L514">CoinGeckoClient.ts:514</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1409,7 +1444,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L526">CoinGeckoClient.ts:526</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L552">CoinGeckoClient.ts:552</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1457,7 +1492,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L446">CoinGeckoClient.ts:446</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L472">CoinGeckoClient.ts:472</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1485,7 +1520,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L432">CoinGeckoClient.ts:432</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L458">CoinGeckoClient.ts:458</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1536,7 +1571,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L732">CoinGeckoClient.ts:732</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L758">CoinGeckoClient.ts:758</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1566,7 +1601,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L541">CoinGeckoClient.ts:541</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L567">CoinGeckoClient.ts:567</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1613,7 +1648,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L556">CoinGeckoClient.ts:556</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L582">CoinGeckoClient.ts:582</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1669,7 +1704,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L742">CoinGeckoClient.ts:742</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L768">CoinGeckoClient.ts:768</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1697,7 +1732,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L752">CoinGeckoClient.ts:752</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L778">CoinGeckoClient.ts:778</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1728,7 +1763,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L573">CoinGeckoClient.ts:573</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L599">CoinGeckoClient.ts:599</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1775,7 +1810,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L603">CoinGeckoClient.ts:603</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L629">CoinGeckoClient.ts:629</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1802,7 +1837,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L589">CoinGeckoClient.ts:589</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L615">CoinGeckoClient.ts:615</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1858,16 +1893,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L42">CoinGeckoClient.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L63">CoinGeckoClient.ts:63</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Make HTTP request to the given endpoint</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the full https URL</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>json content</p>
 						</li>
 					</ul>
 				</section>
@@ -1875,15 +1919,20 @@
 					<a name="makerequest" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> make<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">make<wbr>Request&lt;T&gt;<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="../enums/enum.api_routes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">API_ROUTES</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">make<wbr>Request&lt;T&gt;<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><a href="../enums/enum.api_routes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">API_ROUTES</a>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L78">CoinGeckoClient.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L104">CoinGeckoClient.ts:104</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generic function to make request use in internal function</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -1896,7 +1945,12 @@
 									<h5>action: <a href="../enums/enum.api_routes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">API_ROUTES</a></h5>
 								</li>
 								<li>
-									<h5>params: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></h5>
+									<h5>params: <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> = {}</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1913,7 +1967,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L89">CoinGeckoClient.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L115">CoinGeckoClient.ts:115</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1935,7 +1989,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L93">CoinGeckoClient.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L119">CoinGeckoClient.ts:119</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/inteface.trendingresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">TrendingResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1952,7 +2006,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L34">CoinGeckoClient.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L50">CoinGeckoClient.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1986,7 +2040,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L309">CoinGeckoClient.ts:309</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L335">CoinGeckoClient.ts:335</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2043,7 +2097,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L361">CoinGeckoClient.ts:361</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L387">CoinGeckoClient.ts:387</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2066,7 +2120,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L344">CoinGeckoClient.ts:344</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L370">CoinGeckoClient.ts:370</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2147,7 +2201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/ebe27c9/src/CoinGeckoClient.ts#L674">CoinGeckoClient.ts:674</a></li>
+									<li>Defined in <a href="https://github.com/samuraitruong/coingecko-api-v3/blob/683e43e/src/CoinGeckoClient.ts#L700">CoinGeckoClient.ts:700</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2233,6 +2287,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="coingeckoclient.coingeckoclient-1.html#apiv3url" class="tsd-kind-icon">api<wbr>V3Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="coingeckoclient.coingeckoclient-1.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="coingeckoclient.coingeckoclient-1.html#coinid" class="tsd-kind-icon">coin<wbr>Id</a>

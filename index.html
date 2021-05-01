@@ -62,18 +62,30 @@
 					<h1>coingecko-api-v3</h1>
 				</a>
 				<p><a href="https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml"><img src="https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a></p>
+				<p><a href="https://codecov.io/gh/samuraitruong/coingecko-api-v3"><img src="https://codecov.io/gh/samuraitruong/coingecko-api-v3/branch/main/graph/badge.svg?token=A7P9GCFGN2" alt="codecov"></a></p>
 				<p>The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies</p>
-				<p>Official document here - https:/<a href="http://www.coingecko.com/api/documentations/v3">www.coingecko.com/api/documentations/v3</a></p>
-				<p>API document generated - https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html</p>
+				<p>Official document here
+				https:/<a href="http://www.coingecko.com/api/documentations/v3">www.coingecko.com/api/documentations/v3</a></p>
+				<p>API document generated
+				https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html</p>
 				<a href="#get-started" id="get-started" style="color: inherit; text-decoration: none;">
 					<h2>Get started</h2>
 				</a>
 				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">coingecko</span><span style="color: #000000">-</span><span style="color: #001080">api</span><span style="color: #000000">-</span><span style="color: #001080">v3</span>
 
 </code></pre>
-				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">CoinGeckoClient</span><span style="color: #000000">();</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">CoinGeckoClient</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;coingecko-api-v3&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">CoinGeckoClient</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">timeout:</span><span style="color: #000000"> </span><span style="color: #098658">10000</span><span style="color: #000000">,</span>
+<span style="color: #000000">});</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">trendingSearch</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #795E26">trendingSearch</span><span style="color: #000000">();</span>
 </code></pre>
+				<a href="#options" id="options" style="color: inherit; text-decoration: none;">
+					<h2>Options</h2>
+				</a>
+				<ul>
+					<li>timeout (optional): The http timeout, default 30s</li>
+				</ul>
 				<a href="#supported-api-method" id="supported-api-method" style="color: inherit; text-decoration: none;">
 					<h2>Supported API method</h2>
 				</a>
