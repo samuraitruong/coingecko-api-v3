@@ -26,6 +26,11 @@ describe('CoinGeckoClient test', () => {
       const list = await client.coinList({ include_platform: true });
       expect(list.length).toBeGreaterThan(1);
     });
+    it('/coins/id should successful', async () => {
+      const coin = await client.coinId({ id: 'bitcoin' });
+      expect(coin.name).toBe('Bitcoin');
+      expect(coin.localization).not.toBeNull();
+    });
 
     it('/coins/market should successful', async () => {
       const list = await client.coinMarket({ vs_currency: 'usd', ids: 'origin-protocol,bitcorn' });
