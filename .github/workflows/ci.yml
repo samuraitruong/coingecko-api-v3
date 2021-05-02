@@ -35,11 +35,11 @@ jobs:
       - run: npm install
       - run: npm test
       - run: npm run build
-      - uses: romeovs/lcov-reporter-action@v0.2.16
-        if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          lcov-file: ./coverage/lcov.info
+      # - uses: romeovs/lcov-reporter-action@v0.2.16
+      #   if: github.event_name == 'pull_request'
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     lcov-file: ./coverage/lcov.info
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
