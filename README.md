@@ -4,6 +4,9 @@
 
 [![codecov](https://codecov.io/gh/samuraitruong/coingecko-api-v3/branch/main/graph/badge.svg?token=A7P9GCFGN2)](https://codecov.io/gh/samuraitruong/coingecko-api-v3)
 
+[![version](https://badgen.net/npm/v/coingecko-api-v3)](https://badgen.net/npm/v/coingecko-api-v3)
+
+
 The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies
 
 Official document here

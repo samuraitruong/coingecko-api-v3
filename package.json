@@ -49,8 +49,5 @@
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
-  },
-  "dependencies": {
-    "axios": "^0.21.1"
   }
 }
