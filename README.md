@@ -9,11 +9,10 @@
 
 The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies
 
-Official document here
-https:/www.coingecko.com/api/documentations/v3
+- [Official document here](https:/www.coingecko.com/api/documentations/v3)
 
-API document generated
-https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html
+- [API document generated](https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html)
+
 
 ## Get started
 
