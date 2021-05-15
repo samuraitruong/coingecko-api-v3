@@ -518,5 +518,12 @@ export type GlobalResponse = ResponseWithData<GlobalData>;
 export type GlobalDefiResponse = ResponseWithData<GlobalDefiData>;
 
 export interface Options {
-  timeout?: number
+  timeout?: number,
+  autoRetry?: boolean
+}
+
+export interface HttpResponse<T> {
+  data: T,
+  statusCode: number,
+  headers: { [x: string]: string | string[] }
 }

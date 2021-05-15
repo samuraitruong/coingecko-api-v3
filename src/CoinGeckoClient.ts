@@ -27,6 +27,7 @@ import {
   GlobalResponse,
   GlobalDefiResponse,
   Options,
+  HttpResponse,
 } from './Inteface';
 
 /**
@@ -37,6 +38,7 @@ export class CoinGeckoClient {
 
   options: Options = {
     timeout: 30000,
+    autoRetry: true,
   }
 
   /**
@@ -60,7 +62,7 @@ export class CoinGeckoClient {
    * @param url the full https URL
    * @returns json content
    */
-  private async httpGet(url: string) {
+  private async httpGet<T>(url: string) {
     const options = {
       method: 'GET',
       headers: {
@@ -68,17 +70,34 @@ export class CoinGeckoClient {
       },
       timeout: this.options.timeout, // in ms
     };
-
-    return new Promise((resolve, reject) => {
+    const parseJson = (input: string) => {
+      try {
+        return JSON.parse(input);
+      } catch (err) {
+        return input;
+      }
+    };
+    return new Promise<HttpResponse<T | any>>((resolve, reject) => {
       const req = https.request(url, options, (res) => {
-        if (res.statusCode && (res.statusCode < 200 || res.statusCode > 299)) {
+        if (res.statusCode && res.statusCode === 429) {
+          resolve({
+            statusCode: res.statusCode,
+            data: {
+              error: 'HTTP 429 - Too many request',
+            },
+            headers: res.headers as any,
+          });
           // reject(new Error(`HTTP status code ${res.statusCode}`));
         }
         const body: Array<Uint8Array> = [];
         res.on('data', (chunk) => body.push(chunk));
         res.on('end', () => {
           const resString = Buffer.concat(body).toString();
-          resolve(resString);
+          resolve({
+            statusCode: res.statusCode as number,
+            data: parseJson(resString) as T,
+            headers: res.headers as any,
+          });
         });
       });
 
@@ -101,11 +120,15 @@ export class CoinGeckoClient {
    * @param params
    * @returns
    */
-  private async makeRequest<T>(action: API_ROUTES, params: { [key: string]: any } = {}) {
+  private async makeRequest<T>(action: API_ROUTES, params: { [key: string]: any } = {}): Promise<T> {
     const qs = Object.entries(params).map(([key, value]) => `${key}=${value}`).join('&');
     const requestUrl = `${this.apiV3Url + this.withPathParams(action, params)}?${qs}`;
-    const res = await this.httpGet(requestUrl);// await this.http.get<T>(requestUrl);
-    return JSON.parse(res as string) as T;
+    const res = await this.httpGet<T>(requestUrl);// await this.http.get<T>(requestUrl);
+    if (res.statusCode === 429 && this.options.autoRetry) {
+      await new Promise((r) => setTimeout(r, 2000));
+      return await this.makeRequest<T>(action, params) as T;
+    }
+    return res.data as T;
   }
 
   /**

@@ -6,7 +6,6 @@
 
 [![version](https://badgen.net/npm/v/coingecko-api-v3)](https://badgen.net/npm/v/coingecko-api-v3)
 
-
 The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies
 
 Official document here
@@ -26,6 +25,7 @@ npm install coingecko-api-v3
 import { CoinGeckoClient } from 'coingecko-api-v3';
 const client = new CoinGeckoClient({
   timeout: 10000,
+  autoRetry: true,
 });
 const trendingSearch = await client.trendingSearch();
 ```
@@ -33,6 +33,7 @@ const trendingSearch = await client.trendingSearch();
 ## Options
 
 - timeout (optional): The http timeout, default 30s
+- autoRetry (optional): Auto retry if the http response code is 429 - to many request
 
 ## Supported API method
 
