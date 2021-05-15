@@ -7,4 +7,6 @@ coverage/
 *.tgz
 
 .github/
-./husky/
+.husky/
+.eslintignore
+.jest.config.js
