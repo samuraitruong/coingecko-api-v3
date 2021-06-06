@@ -39,7 +39,7 @@ const trendingSearch = await client.trendingSearch();
 | Endpoint                                                   |                           function | tested? |
 | ---------------------------------------------------------- | ---------------------------------: | :-----: |
 | /ping                                                      |                      client.ping() |   ✅    |
-| /simple/price                                              |                client.simpePrice() |   ✅    |
+| /simple/price                                              |               client.simplePrice() |   ✅    |
 | /simple/token_price/:id                                    |             client.simplePriceId() |   ✅    |
 | /simple/supported_vs_currencies                            | client.simpleSupportedCurrencies() |   ✅    |
 | /coins/list                                                |                  client.coinList() |   ✅    |
