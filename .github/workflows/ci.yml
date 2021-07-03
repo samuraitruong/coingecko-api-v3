@@ -15,16 +15,6 @@ on:
       - main
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - run: npm install
-      - run: npm run lint
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -32,9 +22,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: npm install
-      - run: npm test
-      - run: npm run build
+
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn test
+      - run: yarn build
       # - uses: romeovs/lcov-reporter-action@v0.2.16
       #   if: github.event_name == 'pull_request'
       #   with:
@@ -53,7 +45,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs:
       - build
-      - lint
     env:
       NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
     runs-on: ubuntu-latest
@@ -84,7 +75,7 @@ jobs:
   #       with:
   #         node-version: 14
   #         registry-url: https://npm.pkg.github.com/
-  #     - run: npm install
-  #     - run: npm publish
+  #     - run: yarn install
+  #     - run: yarn publish
   #       env:
   #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
