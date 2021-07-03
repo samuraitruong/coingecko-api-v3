@@ -12,7 +12,8 @@
     "doc-gen": "rm -rf ./dist && typedoc --out ./docs src/",
     "prepublish": "npm run build",
     "publish-doc": "npm run doc-gen &&  gh-pages -d ./docs",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-release --dry-run"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,8 @@
   },
   "homepage": "https://samuraitruong.github.io/coingecko-api-v3",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.41",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -42,6 +45,7 @@
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
+    "standard-version": "^9.3.0",
     "ts-jest": "^26.5.5",
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.35",
