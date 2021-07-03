@@ -60,7 +60,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: Publish NPM
-        run: 'yarn release'
+        run: |
+          yarn release
+          git push --follow-tags origin main && npm publish
 
       - uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
