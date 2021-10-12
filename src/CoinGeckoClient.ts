@@ -63,7 +63,10 @@ export class CoinGeckoClient {
    * @returns json content
    */
   private async httpGet<T>(url: string) {
+    const { host, pathname, search } = new URL(url);
     const options = {
+      host,
+      path: pathname + search,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -78,7 +81,7 @@ export class CoinGeckoClient {
       }
     };
     return new Promise<HttpResponse<T | any>>((resolve, reject) => {
-      const req = https.request(url, options, (res) => {
+      const req = https.request(options, (res) => {
         if (res.statusCode && res.statusCode === 429) {
           resolve({
             statusCode: res.statusCode,
