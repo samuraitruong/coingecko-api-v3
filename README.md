@@ -70,7 +70,7 @@ const trendingSearch = await client.trending();
 | //events/countries                                         |            client.eventCountries() |   ✅    |
 | /events/types                                              |               client.eventsTypes() |   ✅    |
 | /exchange_rates                                            |             client.exhangesRates() |   ✅    |
-| /search/trending                                           |            client.trending() |   ✅    |
+| /search/trending                                           |                  client.trending() |   ✅    |
 | /global                                                    |                    client.global() |   ✅    |
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
 | //global/decentralized_finance_defi                        |                client.globalDefi() |   ✅    |
