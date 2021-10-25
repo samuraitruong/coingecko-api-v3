@@ -22,7 +22,7 @@ const client = new CoinGeckoClient({
   timeout: 10000,
   autoRetry: true,
 });
-const trendingSearch = await client.trendingSearch();
+const trendingSearch = await client.trending();
 ```
 
 ## Options
@@ -70,7 +70,7 @@ const trendingSearch = await client.trendingSearch();
 | //events/countries                                         |            client.eventCountries() |   ✅    |
 | /events/types                                              |               client.eventsTypes() |   ✅    |
 | /exchange_rates                                            |             client.exhangesRates() |   ✅    |
-| /search/trending                                           |            client.searchTrending() |   ✅    |
+| /search/trending                                           |                  client.trending() |   ✅    |
 | /global                                                    |                    client.global() |   ✅    |
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
 | //global/decentralized_finance_defi                        |                client.globalDefi() |   ✅    |
