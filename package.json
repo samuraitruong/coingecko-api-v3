@@ -53,5 +53,8 @@
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "https": "^1.0.0"
   }
 }
