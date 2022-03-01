@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import https from 'https';
 import { API_ROUTES, PLATFORMS } from './Enum';
 import {
@@ -12,17 +13,13 @@ import {
   CoinTickerResponse,
   CoinHistoryResponse,
   CoinMarketChartResponse,
-  CoinStatusUpdateResponse,
   Exchange,
   NameIdPair,
   ExchangeId,
   ExchangeIdTickerResponse,
-  FinanceProduct,
   FinancePlatform,
   Derivative,
   DerivativeExchange,
-  EventResponse,
-  EventCountryResponse,
   ExchangeRatesResponse,
   GlobalResponse,
   GlobalDefiResponse,
@@ -296,23 +293,24 @@ valid values: true, false
     return this.makeRequest<CoinMarketChartResponse>(API_ROUTES.COIN_MARKET_CHART_RANGE, input);
   }
 
-  /**
-   * Get status updates for a given coin (beta)
-   *
-   * @see https://www.coingecko.com/api/documentations/v3#/coins/get_coins__id__status_updates
-   * @category Coin
-   * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
-   * @param input.per_page Total results per page
-   * @param input.page Page through results
-   * @returns {CoinStatusUpdateResponse}
-   */
-  public async coinIdStatusUpdates(input: {
-    id: string,
-    per_page?: number,
-    page?: number,
-  }) {
-    return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.COIN_STATUS_UPDATES, input);
-  }
+  // /**
+  //  * Get status updates for a given coin (beta)
+  //  *
+  //  * @see https://www.coingecko.com/api/documentations/v3#/coins/get_coins__id__status_updates
+  //  * @category Coin
+  //  * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
+  //  * @param input.per_page Total results per page
+  //  * @param input.page Page through results
+  //  * @returns {CoinStatusUpdateResponse}
+  //  */
+  // ! Removed from the API
+  // public async coinIdStatusUpdates(input: {
+  //   id: string,
+  //   per_page?: number,
+  //   page?: number,
+  // }) {
+  //   return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.COIN_STATUS_UPDATES, input);
+  // }
 
   /**
    * Get coin's OHLC (Beta)
@@ -548,23 +546,24 @@ valid values: true, false
     return this.makeRequest<ExchangeIdTickerResponse>(API_ROUTES.EXCHANGE_ID_TICKER, input);
   }
 
-  /**
-   * Get status updates for a given exchange (beta)
-   * @see https://www.coingecko.com/api/documentations/v3#/exchanges_(beta)/get_exchanges__id__status_updates
-   * @param input.id pass the exchange id (can be obtained from /exchanges/list) eg. binance
-   * @param input.page Page through results
-   * @param input.per_page Total results per page
-   * @returns Get status updates for a given exchange
-   * @category Exchange
-   * @returns {CoinStatusUpdateResponse} Get status updates for a given exchange
-   */
-  public async exchangeIdStatusUpdates(input: {
-    id: string,
-    page?: number,
-    per_page?: number,
-  }) {
-    return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.EXCHANGE_ID_STATUS_UPDATES, input);
-  }
+  // /**
+  //  * Get status updates for a given exchange (beta)
+  //  * @see https://www.coingecko.com/api/documentations/v3#/exchanges_(beta)/get_exchanges__id__status_updates
+  //  * @param input.id pass the exchange id (can be obtained from /exchanges/list) eg. binance
+  //  * @param input.page Page through results
+  //  * @param input.per_page Total results per page
+  //  * @returns Get status updates for a given exchange
+  //  * @category Exchange
+  //  * @returns {CoinStatusUpdateResponse} Get status updates for a given exchange
+  //  */
+  //  ! Status updates no longer exist on API
+  // public async exchangeIdStatusUpdates(input: {
+  //   id: string,
+  //   page?: number,
+  //   per_page?: number,
+  // }) {
+  //   return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.EXCHANGE_ID_STATUS_UPDATES, input);
+  // }
 
   /**
    * Get status updates for a given exchange (beta)
@@ -597,22 +596,23 @@ valid values: true, false
     return this.makeRequest<Array<FinancePlatform>>(API_ROUTES.FINANCE_PLATFORM, input);
   }
 
-  /**
-   * List all finance products
-   * @see https://www.coingecko.com/api/documentations/v3#/finance_(beta)/get_finance_products
-   * @param input.per_page Total results per page
-   * @param input.page Data up to number of days ago (eg. 1,14,30)
-   * @category Finance
-   * @returns {Finance[]}
-   */
-  public async financeProducts(input?: {
-    per_page?: number,
-    page?: number,
-    start_at?: string,
-    end_at?: string;
-  }) {
-    return this.makeRequest<Array<FinanceProduct>>(API_ROUTES.FINANCE_PRODUCT, input);
-  }
+  // /**
+  //  * List all finance products
+  //  * @see https://www.coingecko.com/api/documentations/v3#/finance_(beta)/get_finance_products
+  //  * @param input.per_page Total results per page
+  //  * @param input.page Data up to number of days ago (eg. 1,14,30)
+  //  * @category Finance
+  //  * @returns {Finance[]}
+  //  */
+  //  ! No longer exists on API
+  // public async financeProducts(input?: {
+  //   per_page?: number,
+  //   page?: number,
+  //   start_at?: string,
+  //   end_at?: string;
+  // }) {
+  //   return this.makeRequest<Array<FinanceProduct>>(API_ROUTES.FINANCE_PRODUCT, input);
+  // }
 
   /**
    * List all market indexes
@@ -713,67 +713,69 @@ valid values: true, false
     return this.makeRequest<NameIdPair[]>(API_ROUTES.DERIVATIVES_EXCHANGES_LIST);
   }
 
-  /**
-  * List all status_updates with data (description, category, created_at, user, user_title and pin)
-  * @see https://www.coingecko.com/api/documentations/v3#/status_updates_(beta)/get_status_updates
-  * @param input.category Filtered by category (eg. general, milestone, partnership, exchange_listing, software_release, fund_movement, new_listings, event)
-  * @param input.project_type Filtered by Project Type (eg. coin, market). If left empty returns both status from coins and markets.
-  * @param input.per_page Total results per page
-  * @param input.page Page through results
-  * @category Status Updates
-  * @returns {CoinStatusUpdateResponse}
-  */
-  public async statusUpdates(input?: {
-    category?: string,
-    project_type?: string,
-    per_page?: number,
-    page?: number
-  }) {
-    return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.STATUS_UPDATES, input);
-  }
+  // /**
+  // * List all status_updates with data (description, category, created_at, user, user_title and pin)
+  // * @see https://www.coingecko.com/api/documentations/v3#/status_updates_(beta)/get_status_updates
+  // * @param input.category Filtered by category (eg. general, milestone, partnership, exchange_listing, software_release, fund_movement, new_listings, event)
+  // * @param input.project_type Filtered by Project Type (eg. coin, market). If left empty returns both status from coins and markets.
+  // * @param input.per_page Total results per page
+  // * @param input.page Page through results
+  // * @category Status Updates
+  // * @returns {CoinStatusUpdateResponse}
+  // */
+  // ! NO LONGER EXISTS IN API
+  // public async statusUpdates(input?: {
+  //   category?: string,
+  //   project_type?: string,
+  //   per_page?: number,
+  //   page?: number
+  // }) {
+  //   return this.makeRequest<CoinStatusUpdateResponse>(API_ROUTES.STATUS_UPDATES, input);
+  // }
 
-  /**
-  * Get events, paginated by 100
-  * @see https://www.coingecko.com/api/documentations/v3#/events/get_events
-  * @param input.country_code country_code of event (eg. ‘US’). use /api/v3/events/countries for list of country_codes
-  * @param input.type ype of event (eg. ‘Conference’). use /api/v3/events/types for list of types
-  * @param input.page page of results (paginated by 100)
-  * @param input.upcoming_events_only lists only upcoming events.(defaults to true, set to false to list all events)
-  * @param input.from_date lists events after this date yyyy-mm-dd
-  * @param input.to_date lists events before this date yyyy-mm-dd (set upcoming_events_only to false if fetching past events)
-  * @category Events
-  * @returns {EventResponse}
-  */
-  public async events(input?: {
-    country_code?: string,
-    type?: string,
-    page?: number,
-    upcoming_events_only?: boolean,
-    from_date?: string,
-    to_date?: string
-  }) {
-    return this.makeRequest<EventResponse>(API_ROUTES.EVENTS, input);
-  }
+  // /**
+  // * Get events, paginated by 100
+  // * @see https://www.coingecko.com/api/documentations/v3#/events/get_events
+  // * @param input.country_code country_code of event (eg. ‘US’). use /api/v3/events/countries for list of country_codes
+  // * @param input.type ype of event (eg. ‘Conference’). use /api/v3/events/types for list of types
+  // * @param input.page page of results (paginated by 100)
+  // * @param input.upcoming_events_only lists only upcoming events.(defaults to true, set to false to list all events)
+  // * @param input.from_date lists events after this date yyyy-mm-dd
+  // * @param input.to_date lists events before this date yyyy-mm-dd (set upcoming_events_only to false if fetching past events)
+  // * @category Events
+  // * @returns {EventResponse}
+  // */
+  // ! NO LONGER EXISTS ON API
+  // public async events(input?: {
+  //   country_code?: string,
+  //   type?: string,
+  //   page?: number,
+  //   upcoming_events_only?: boolean,
+  //   from_date?: string,
+  //   to_date?: string
+  // }) {
+  //   return this.makeRequest<EventResponse>(API_ROUTES.EVENTS, input);
+  // }
 
-  /**
-  * Get list of event countries
-  * @see https://www.coingecko.com/api/documentations/v3#/events/get_events_countries
-  * @category Events
-  * @returns {EventCountryResponse}
-  */
-  public async eventsCountries() {
-    return this.makeRequest<EventCountryResponse>(API_ROUTES.EVENTS_COUNTRIES);
-  }
+  // /**
+  // * Get list of event countries
+  // * @see https://www.coingecko.com/api/documentations/v3#/events/get_events_countries
+  // * @category Events
+  // * @returns {EventCountryResponse}
+  // */
+  // public async eventsCountries() {
+  //   return this.makeRequest<EventCountryResponse>(API_ROUTES.EVENTS_COUNTRIES);
+  // }
 
-  /**
-  * Get list of events types
-  * @see https://www.coingecko.com/api/documentations/v3#/events/get_events_types
-  * @category Events
-  * @returns {EventCountryResponse}
-  */
-  public async eventsTypes() {
-    return this.makeRequest<EventCountryResponse>(API_ROUTES.EVENTS_TYPES);
-  }
+  // /**
+  // * Get list of events types
+  // * @see https://www.coingecko.com/api/documentations/v3#/events/get_events_types
+  // * @category Events
+  // * @returns {EventCountryResponse}
+  // */
+  // public async eventsTypes() {
+  //   return this.makeRequest<EventCountryResponse>(API_ROUTES.EVENTS_TYPES);
+  // }
 
   /**
   * Get BTC-to-Currency exchange rates
