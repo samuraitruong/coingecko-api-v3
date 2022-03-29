@@ -8,7 +8,7 @@ export enum API_ROUTES {
   COIN_HISTORY = '/coins/{id}/history',
   COIN_MARKET_CHART = '/coins/{id}/market_chart',
   COIN_MARKET_CHART_RANGE = '/coins/{id}/market_chart/range',
-  COIN_STATUS_UPDATES = '/coins/{id}/status_updates',
+  // COIN_STATUS_UPDATES = '/coins/{id}/status_updates', NO LONGER EXISTS IN API
   COIN_OHLC = '/coins/{id}/ohlc',
   SIMPLE_PRICE = '/simple/price',
   SIMPLE_SUPPORTED_CURRENCIES = '/simple/supported_vs_currencies',
@@ -20,10 +20,10 @@ export enum API_ROUTES {
   EXCHANGE_LIST = '/exchanges/list',
   EXCHANGE_ID = '/exchanges/{id}',
   EXCHANGE_ID_TICKER = '/exchanges/{id}/tickers',
-  EXCHANGE_ID_STATUS_UPDATES = '/exchanges/{id}/status_updates',
+  // EXCHANGE_ID_STATUS_UPDATES = '/exchanges/{id}/status_updates', NO LONGER EXISTS IN API
   EXCHANGE_ID_VOL_CHART = '/exchanges/{id}/volume_chart',
-  FINANCE_PLATFORM = '/finance_platforms',
-  FINANCE_PRODUCT = '/finance_products',
+  FINANCE_PLATFORM = '/asset_platforms',
+  // FINANCE_PRODUCT = '/finance_products', NO LONGER EXISTS IN API
   INDEXES = '/indexes',
   INDEXES_LIST = '/indexes/list',
   INDEXES_MARKET_ID = '/indexes/{market_id}/{id}',
@@ -32,10 +32,10 @@ export enum API_ROUTES {
   DERIVATIVES_EXCHANGES = '/derivatives/exchanges',
   DERIVATIVES_EXCHANGES_ID = '/derivatives/exchanges/{id}',
   DERIVATIVES_EXCHANGES_LIST = '/derivatives/exchanges/list',
-  STATUS_UPDATES = '/status_updates',
-  EVENTS = '/events',
-  EVENTS_COUNTRIES = '/events/countries',
-  EVENTS_TYPES = '/events/types',
+  // STATUS_UPDATES = '/status_updates', NO LONGER EXISTS IN API
+  // EVENTS = '/events', NO LONGER EXISTS IN API
+  // EVENTS_COUNTRIES = '/events/countries', NO LONGER EXISTS IN API
+  // EVENTS_TYPES = '/events/types', NO LONGER EXISTS IN API
   EXCHANGE_RATES = '/exchange_rates',
   GLOBAL = '/global',
   GLOBAL_DEFI = '/global/decentralized_finance_defi'

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { CoinGeckoClient } from './CoinGeckoClient';
 
 const client = new CoinGeckoClient();
@@ -75,10 +76,12 @@ describe('CoinGeckoClient test', () => {
       expect(marketChart.prices[0][1]).toBeGreaterThan(0);
     });
 
-    it('/coins/{id}/status_updates should successful', async () => {
-      const statusUpdate = await client.coinIdStatusUpdates({ id: 'litecoin' });
-      expect(statusUpdate.status_updates.length).toBeGreaterThan(0);
-    });
+    // ! Removed from API
+    // it('/coins/{id}/status_updates should successful', async () => {
+    //   const statusUpdate = await client.coinIdStatusUpdates({ id: 'litecoin' });
+    //   console.log(statusUpdate);
+    //   expect(statusUpdate.status_updates.length).toBeGreaterThan(0);
+    // });
 
     it('/coins/{id}/ohlc should successful', async () => {
       const ohlc = await client.coinIdOHLC({ id: 'litecoin', vs_currency: 'aud', days: 30 });
@@ -174,8 +177,8 @@ describe('CoinGeckoClient test', () => {
       expect(exchanges.length).toBeGreaterThan(0);
 
       expect(exchanges[0]).toEqual({
-        id: 'aave',
-        name: 'Aave',
+        id: '1bch',
+        name: '1BCH',
       });
     });
 
@@ -190,10 +193,11 @@ describe('CoinGeckoClient test', () => {
       expect(aave.tickers.length).toBeGreaterThan(1);
     });
 
-    it('/exchange/id/status_update should successful', async () => {
-      const aave = await client.exchangeIdStatusUpdates({ id: 'whitebit' });
-      expect(aave.status_updates.length).toBeGreaterThan(1);
-    });
+    // ! Status updates no longer present on API
+    // it('/exchange/id/status_update should successful', async () => {
+    //   const aave = await client.exchangeIdStatusUpdates({ id: 'whitebit' });
+    //   expect(aave.status_updates.length).toBeGreaterThan(1);
+    // });
 
     it('/exchange/id/volume_chart should successful', async () => {
       const aave = await client.exchangeIdVolumeChart({ id: 'whitebit', days: 1 });
@@ -207,10 +211,11 @@ describe('CoinGeckoClient test', () => {
       expect(platform.length).toBeGreaterThan(0);
     });
 
-    it('/finance_products should successful', async () => {
-      const products = await client.financeProducts({});
-      expect(products.length).toBeGreaterThan(0);
-    });
+    // ! Not present on API
+    // it('/finance_products should successful', async () => {
+    //   const products = await client.financeProducts({});
+    //   expect(products.length).toBeGreaterThan(0);
+    // });
   });
 
   describe('Indexes', () => {
@@ -268,33 +273,35 @@ describe('CoinGeckoClient test', () => {
       });
     });
   });
-  describe('Status Updates', () => {
-    it('/status_updates', async () => {
-      const list = await client.statusUpdates();
-      expect(list.status_updates.length).toBeGreaterThan(0);
-    });
-  });
+  //  ! No longer exists on API
+  // describe('Status Updates', () => {
+  //   it('/status_updates', async () => {
+  //     const list = await client.statusUpdates();
+  //     expect(list.status_updates.length).toBeGreaterThan(0);
+  //   });
+  // });
 
-  describe('Events', () => {
-    it('/events', async () => {
-      const list = await client.events();
-      expect(list.data.length).toBeGreaterThanOrEqual(0);
-    });
+  // ! No longer exists on API
+  // describe('Events', () => {
+  //   it('/events', async () => {
+  //     const list = await client.events();
+  //     expect(list.data.length).toBeGreaterThanOrEqual(0);
+  //   });
 
-    it('/events/countries', async () => {
-      const list = await client.eventsCountries();
-      expect(list.data.length).toBeGreaterThan(0);
-      expect(list.data[2]).toEqual({
-        country: expect.any(String),
-        code: expect.any(String),
-      });
-    });
+  //   it('/events/countries', async () => {
+  //     const list = await client.eventsCountries();
+  //     expect(list.data.length).toBeGreaterThan(0);
+  //     expect(list.data[2]).toEqual({
+  //       country: expect.any(String),
+  //       code: expect.any(String),
+  //     });
+  //   });
 
-    it('/events/types', async () => {
-      const list = await client.eventsTypes();
-      expect(list.count).toBeGreaterThanOrEqual(0);
-    });
-  });
+  //   it('/events/types', async () => {
+  //     const list = await client.eventsTypes();
+  //     expect(list.count).toBeGreaterThanOrEqual(0);
+  //   });
+  // });
 
   describe('Exchange Rates', () => {
     it('/events', async () => {
