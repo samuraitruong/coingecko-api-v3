@@ -67,10 +67,11 @@ const trendingSearch = await client.trending();
 | /derivatives/exchanges/{id}                                |   client./derivativesExchangesId() |   ✅    |
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
 | /event                                                     |                    client.events() |   ✅    |
-| //events/countries                                         |            client.eventCountries() |   ✅    |
+| /events/countries                                          |            client.eventCountries() |   ✅    |
 | /events/types                                              |               client.eventsTypes() |   ✅    |
 | /exchange_rates                                            |             client.exhangesRates() |   ✅    |
 | /search/trending                                           |                  client.trending() |   ✅    |
+| /search                                                    |                  client.search()   |   ✅    |
 | /global                                                    |                    client.global() |   ✅    |
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
 | //global/decentralized_finance_defi                        |                client.globalDefi() |   ✅    |

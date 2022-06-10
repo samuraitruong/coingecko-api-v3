@@ -7,6 +7,7 @@ import {
   CoinMarket,
   PingResponse,
   TrendingResponse,
+  SearchResponse,
   SimplePriceResponse,
   TokenPriceResponse,
   CoinFullInfo,
@@ -137,6 +138,15 @@ export class CoinGeckoClient {
    */
   public async ping() {
     return this.makeRequest<PingResponse>(API_ROUTES.PING);
+  }
+
+  /**
+   * Search for coins, categories and markets listed on CoinGecko ordered by largest Market Cap first.
+   * @param input.query your search query.
+   * @returns {SearchResponse}
+   */
+  public async search(input: {query?: string}) {
+    return this.makeRequest<SearchResponse>(API_ROUTES.SEARCH, input);
   }
 
   public async trending() {
