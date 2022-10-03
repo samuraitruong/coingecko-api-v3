@@ -74,3 +74,7 @@ const trendingSearch = await client.trending();
 | /global                                                    |                    client.global() |   ✅    |
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
 | //global/decentralized_finance_defi                        |                client.globalDefi() |   ✅    |
+
+
+## WIP
+- Update to 2020 api changes
