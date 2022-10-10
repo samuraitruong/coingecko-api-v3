@@ -1,3 +1,3 @@
 export * from './Enum';
-export * from './Inteface';
+export * from './Interface';
 export * from './CoinGeckoClient';

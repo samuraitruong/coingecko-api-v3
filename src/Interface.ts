@@ -35,6 +35,23 @@ export interface Exchange {
   trade_volume_24h_btc_normalized: number;
 }
 
+export interface CoinItem {
+  id?: string,
+  name?: string,
+  api_symbol?: string,
+  symbol?: string,
+  market_cap_rank?: number,
+  thumb?: string,
+  large?: string
+}
+
+export interface SearchResponse {
+  coins?: CoinItem[];
+  exchanges?: Exchange[];
+  categories?: string[];
+  nfts?: string[];
+}
+
 export interface TrendingItem {
   id?: string;
   name?: string;

@@ -1,5 +1,6 @@
 export enum API_ROUTES {
   PING = '/ping',
+  SEARCH = '/search',
   SEARCH_TRENDING = '/search/trending',
   COIN = '/coins/{id}',
   COIN_LIST = '/coins/list',
