@@ -25,7 +25,8 @@ import {
   GlobalDefiResponse,
   Options,
   HttpResponse,
-} from './Inteface';
+  SearchResponse,
+} from './Interface';
 
 /**
  * The wrap client to access all api on coin gecko
@@ -139,6 +140,20 @@ export class CoinGeckoClient {
     return this.makeRequest<PingResponse>(API_ROUTES.PING);
   }
 
+  /**
+   * Search for coins, categories and markets listed on CoinGecko ordered by largest Market Cap first.
+   * @param input.query your search query.
+   * @returns {SearchResponse}
+   */
+  public async search(input: {query?: string}) {
+    return this.makeRequest<SearchResponse>(API_ROUTES.SEARCH, input);
+  }
+
+  /**
+   * Top-7 trending coins on CoinGecko as searched by users in the last 24 hours (Ordered by most popular first)
+   *
+   * @returns {TrendingResponse}
+   */
   public async trending() {
     return this.makeRequest<TrendingResponse>(API_ROUTES.SEARCH_TRENDING);
   }
