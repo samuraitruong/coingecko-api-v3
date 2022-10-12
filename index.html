@@ -64,9 +64,9 @@
 				<p><a href="https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml"><img src="https://github.com/samuraitruong/coingecko-api-v3/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a> <a href="https://codecov.io/gh/samuraitruong/coingecko-api-v3"><img src="https://codecov.io/gh/samuraitruong/coingecko-api-v3/branch/main/graph/badge.svg?token=A7P9GCFGN2" alt="codecov"></a> <a href="https://badgen.net/npm/v/coingecko-api-v3"><img src="https://badgen.net/npm/v/coingecko-api-v3" alt="version"></a></p>
 				<p>The nodejs api library for accessing coingecko api v3 , develop with typescript with zero dependencies</p>
 				<ul>
-					<li><p><a href="https:/www.coingecko.com/api/documentations/v3">Official document here</a></p>
+					<li><p><a href="https://www.coingecko.com/api/documentations/v3">Official document here</a></p>
 					</li>
-					<li><p><a href="https:/samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html">API document generated</a></p>
+					<li><p><a href="https://samuraitruong.github.io/coingecko-api-v3/classes/coingeckoclient.coingeckoclient-1.html">API document generated</a></p>
 					</li>
 				</ul>
 				<a href="#get-started" id="get-started" style="color: inherit; text-decoration: none;">
@@ -80,7 +80,7 @@
 <span style="color: #000000">  </span><span style="color: #001080">timeout:</span><span style="color: #000000"> </span><span style="color: #098658">10000</span><span style="color: #000000">,</span>
 <span style="color: #000000">  </span><span style="color: #001080">autoRetry:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
 <span style="color: #000000">});</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">trendingSearch</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #795E26">trendingSearch</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">trendingSearch</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #795E26">trending</span><span style="color: #000000">();</span>
 </code></pre>
 				<a href="#options" id="options" style="color: inherit; text-decoration: none;">
 					<h2>Options</h2>
@@ -261,28 +261,18 @@
 							<td align="center">✅</td>
 						</tr>
 						<tr>
-							<td>/event</td>
-							<td align="right">client.events()</td>
-							<td align="center">✅</td>
-						</tr>
-						<tr>
-							<td>//events/countries</td>
-							<td align="right">client.eventCountries()</td>
-							<td align="center">✅</td>
-						</tr>
-						<tr>
-							<td>/events/types</td>
-							<td align="right">client.eventsTypes()</td>
-							<td align="center">✅</td>
-						</tr>
-						<tr>
 							<td>/exchange_rates</td>
 							<td align="right">client.exhangesRates()</td>
 							<td align="center">✅</td>
 						</tr>
 						<tr>
+							<td>/search</td>
+							<td align="right">client.search()</td>
+							<td align="center">✅</td>
+						</tr>
+						<tr>
 							<td>/search/trending</td>
-							<td align="right">client.searchTrending()</td>
+							<td align="right">client.trending()</td>
 							<td align="center">✅</td>
 						</tr>
 						<tr>
@@ -296,11 +286,15 @@
 							<td align="center">✅</td>
 						</tr>
 						<tr>
-							<td>//global/decentralized_finance_defi</td>
+							<td>/global/decentralized_finance_defi</td>
 							<td align="right">client.globalDefi()</td>
 							<td align="center">✅</td>
 						</tr>
 				</tbody></table>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h2>Development</h2>
+				</a>
+				<p>e</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -310,13 +304,13 @@
 						<a href="modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/coingeckoclient.html">Coin<wbr>Gecko<wbr>Client</a>
+						<a href="modules/CoinGeckoClient.html">Coin<wbr>Gecko<wbr>Client</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/enum.html">Enum</a>
+						<a href="modules/Enum.html">Enum</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/inteface.html">Inteface</a>
+						<a href="modules/Interface.html">Interface</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/index.html">index</a>
