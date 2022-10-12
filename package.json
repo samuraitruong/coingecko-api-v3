@@ -13,7 +13,7 @@
     "prepublish": "npm run build",
     "publish-doc": "npm run doc-gen &&  gh-pages -d ./docs",
     "prepare": "husky install",
-    "release": "standard-version --dry-run"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
