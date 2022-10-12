@@ -66,9 +66,6 @@ const trendingSearch = await client.trending();
 | /derivatives/exchanges                                     |     client./derivativesExchanges() |   ✅    |
 | /derivatives/exchanges/{id}                                |   client./derivativesExchangesId() |   ✅    |
 | /status_updates                                            |             client.statusUpdates() |   ✅    |
-| /event                                                     |                    client.events() |   ✅    |
-| /events/countries                                          |            client.eventCountries() |   ✅    |
-| /events/types                                              |               client.eventsTypes() |   ✅    |
 | /exchange_rates                                            |             client.exhangesRates() |   ✅    |
 | /search                                                    |                    client.search() |   ✅    |
 | /search/trending                                           |                  client.trending() |   ✅    |
@@ -77,5 +74,5 @@ const trendingSearch = await client.trending();
 | /global/decentralized_finance_defi                         |                client.globalDefi() |   ✅    |
 
 
-## WIP
-- Update to 2020 api changes
+## Development
+e
