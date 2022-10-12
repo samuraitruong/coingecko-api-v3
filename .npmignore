@@ -5,7 +5,7 @@ src/
 .eslintrc.json
 coverage/
 *.tgz
-
+.yarn
 .github/
 .husky/
 .eslintignore
