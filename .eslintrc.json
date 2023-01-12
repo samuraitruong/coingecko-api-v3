@@ -2,7 +2,7 @@
   "env": {
     "node": true,
     "es2020": true,
-    "jest/globals": true
+    "jest": true
   },
   "extends": [
     "airbnb-base",
@@ -15,7 +15,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "jest"],
+  "plugins": ["@typescript-eslint"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -24,6 +24,7 @@
     }
   },
   "rules": {
+    "no-promise-executor-return": ["warn"],
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
