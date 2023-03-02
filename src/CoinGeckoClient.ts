@@ -65,7 +65,7 @@ export class CoinGeckoClient {
    */
   private async httpGet<T>(url: string) {
     const { host, pathname, search } = new URL(url);
-    const options = {
+    const options: https.RequestOptions = {
       host,
       path: pathname + search,
       method: "GET",
@@ -74,6 +74,7 @@ export class CoinGeckoClient {
         Accept: "application/json",
       },
       timeout: this.options.timeout, // in ms
+      ...this.options.extraHTTPSOptions,
     };
     const parseJson = (input: string) => {
       try {

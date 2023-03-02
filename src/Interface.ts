@@ -1,3 +1,4 @@
+import { RequestOptions } from 'https';
 import { PLATFORMS } from './Enum';
 
 export interface PingResponse {
@@ -536,7 +537,8 @@ export type GlobalDefiResponse = ResponseWithData<GlobalDefiData>;
 
 export interface Options {
   timeout?: number,
-  autoRetry?: boolean
+  autoRetry?: boolean,
+  extraHTTPSOptions?: RequestOptions
 }
 
 export interface HttpResponse<T> {
