@@ -159,6 +159,11 @@ export class CoinGeckoClient {
       await new Promise((r) => setTimeout(r, retryAfter));
       return (await this.makeRequest<T>(action, params)) as T;
     }
+
+    if(res.statusCode.toString().slice(0, 1) !== '2') {
+      throw new Error(`got error from coin gecko. status code: ${res.statusCode}`)
+    }
+
     return res.data as T;
   }
 
