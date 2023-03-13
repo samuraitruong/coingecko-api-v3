@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.22 (2023-03-03)
+
+
+### Features
+
+* add extraHTTPSOptions ([#32](https://github.com/samuraitruong/coingecko-api-v3/issues/32)) ([75c42cf](https://github.com/samuraitruong/coingecko-api-v3/commit/75c42cf42938140657f3593478e1752b23332045))
+
+### 0.0.21 (2023-03-02)
+
+
+### Features
+
+* pro api support ([#31](https://github.com/samuraitruong/coingecko-api-v3/issues/31)) ([c8a53e5](https://github.com/samuraitruong/coingecko-api-v3/commit/c8a53e53ddb6e49d1d6e5fb53491ea778a682216))
+
 ### 0.0.20 (2023-02-09)
 
 ### 0.0.19 (2023-01-17)

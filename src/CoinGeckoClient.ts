@@ -32,19 +32,31 @@ import {
  * The wrap client to access all api on coin gecko
  */
 export class CoinGeckoClient {
-  apiV3Url = "https://api.coingecko.com/api/v3";
+  private static readonly API_V3_URL = "https://api.coingecko.com/api/v3";
+
+  private static readonly PRO_API_V3_URL = "https://pro-api.coingecko.com/api/v3";
 
   options: Options = {
     timeout: 30000,
     autoRetry: true,
   };
 
+  baseURL: string;
+
+  apiKey?: string;
+
   /**
    * Constructor
    * @param options the options passed for client library, at the moment only timeout are support
    */
-  constructor(options?: Options) {
+  constructor(options?: Options, apiKey?: string) {
     this.options = { ...this.options, ...options };
+    if (!apiKey) {
+      this.baseURL = CoinGeckoClient.API_V3_URL;
+    } else {
+      this.baseURL = CoinGeckoClient.PRO_API_V3_URL;
+      this.apiKey = apiKey;
+    }
   }
 
   private withPathParams(
@@ -130,11 +142,14 @@ export class CoinGeckoClient {
     action: API_ROUTES,
     params: { [key: string]: any } = {}
   ): Promise<T> {
+    if (this.apiKey) {
+      params.x_cg_pro_api_key =  this.apiKey;
+    }
     const qs = Object.entries(params)
       .map(([key, value]) => `${key}=${value}`)
       .join("&");
     const requestUrl = `${
-      this.apiV3Url + this.withPathParams(action, params)
+      this.baseURL + this.withPathParams(action, params)
     }?${qs}`;
     const res = await this.httpGet<T>(requestUrl); // await this.http.get<T>(requestUrl);
     if (res.statusCode === 429 && this.options.autoRetry) {
