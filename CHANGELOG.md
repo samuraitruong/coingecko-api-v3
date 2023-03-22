@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.23 (2023-03-22)
+
+
+### Features
+
+* should fail on not 2xx status code ([#33](https://github.com/samuraitruong/coingecko-api-v3/issues/33)) ([dfddc94](https://github.com/samuraitruong/coingecko-api-v3/commit/dfddc94ebb4f7f3397214d0fd840883e1d744681))
+
 ### 0.0.22 (2023-03-03)
 
 
