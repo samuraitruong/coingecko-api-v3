@@ -222,7 +222,7 @@ valid values: true, false
    */
   public async coinMarket(input: {
     vs_currency: string;
-    ids: string;
+    ids?: string;
     category?: "decentralized_finance_defi" | "stablecoins";
     order?:
       | "market_cap_desc"
