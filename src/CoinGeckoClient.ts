@@ -34,7 +34,8 @@ import {
 export class CoinGeckoClient {
   private static readonly API_V3_URL = "https://api.coingecko.com/api/v3";
 
-  private static readonly PRO_API_V3_URL = "https://pro-api.coingecko.com/api/v3";
+  private static readonly PRO_API_V3_URL =
+    "https://pro-api.coingecko.com/api/v3";
 
   options: Options = {
     timeout: 30000,
@@ -84,6 +85,7 @@ export class CoinGeckoClient {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        "User-Agent": "coingeckoclient/0.0.1",
       },
       timeout: this.options.timeout, // in ms
       ...this.options.extraHTTPSOptions,
@@ -143,7 +145,7 @@ export class CoinGeckoClient {
     params: { [key: string]: any } = {}
   ): Promise<T> {
     if (this.apiKey) {
-      params.x_cg_pro_api_key =  this.apiKey;
+      params.x_cg_pro_api_key = this.apiKey;
     }
     const qs = Object.entries(params)
       .map(([key, value]) => `${key}=${value}`)
@@ -160,8 +162,10 @@ export class CoinGeckoClient {
       return (await this.makeRequest<T>(action, params)) as T;
     }
 
-    if(res.statusCode.toString().slice(0, 1) !== '2') {
-      throw new Error(`got error from coin gecko. status code: ${res.statusCode}`)
+    if (res.statusCode.toString().slice(0, 1) !== "2") {
+      throw new Error(
+        `got error from coin gecko. status code: ${res.statusCode}`
+      );
     }
 
     return res.data as T;
