@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.26 (2023-05-25)
+
+
+### Bug Fixes
+
+* missing user-agent cause 403 error ([6a62c30](https://github.com/samuraitruong/coingecko-api-v3/commit/6a62c303ec95ac8e9adc2af2ccd96ef75e224181))
+
 ### 0.0.25 (2023-05-23)
 
 ### 0.0.24 (2023-05-22)
