@@ -543,7 +543,7 @@ export interface Options {
 
 export interface ApiKeyOptions {
   apiKey: string,
-  isDemo: boolean
+  isDemo?: boolean
 }
 
 export interface HttpResponse<T> {

@@ -24,6 +24,28 @@ describe("CoinGeckoClient test", () => {
       })
     );
   });
+
+  describe("API BaseURL", ()=> {
+    it('baseURL should be equal to public api URL when demo key passed', () => {
+      const fixture = new CoinGeckoClient({},{apiKey: "random_demo_key", isDemo: true});
+      expect(fixture.baseURL).toEqual("https://api.coingecko.com/api/v3")
+    });
+
+    it('baseURL should be equal to public api URL when no key is passed', () => {
+      const fixture = new CoinGeckoClient({});
+      expect(fixture.baseURL).toEqual("https://api.coingecko.com/api/v3")
+    });
+
+    it('baseURL should be equal to pro api URL when pro key is passed', () => {
+      // isDemo passed explicitly
+      const fixture = new CoinGeckoClient({}, {apiKey: "random_pro_key", isDemo: false});
+      // isDemo not passed
+      const fixture2 = new CoinGeckoClient({}, {apiKey: "random_pro_key"});
+      expect(fixture.baseURL).toEqual("https://pro-api.coingecko.com/api/v3")
+      expect(fixture2.baseURL).toEqual("https://pro-api.coingecko.com/api/v3")
+    });
+  })
+
   describe("Coins", () => {
     it("/coins/list should successful", async () => {
       const list = await client.coinList({ include_platform: true });
@@ -138,6 +160,7 @@ describe("CoinGeckoClient test", () => {
       });
     });
   });
+
   describe("Contract", () => {
     it("/coins/{id}/contract/{contract_address} should successful", async () => {
       const aave = await client.contract({
