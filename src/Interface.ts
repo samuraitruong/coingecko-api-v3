@@ -541,6 +541,11 @@ export interface Options {
   extraHTTPSOptions?: RequestOptions
 }
 
+export interface ApiKeyOptions {
+  apiKey: string,
+  isDemo?: boolean
+}
+
 export interface HttpResponse<T> {
   data: T,
   statusCode: number,

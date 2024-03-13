@@ -26,6 +26,7 @@ import {
   Options,
   HttpResponse,
   SearchResponse,
+  ApiKeyOptions,
 } from "./Interface";
 
 /**
@@ -44,19 +45,28 @@ export class CoinGeckoClient {
 
   baseURL: string;
 
-  apiKey?: string;
+  apiKeyParam?: {
+    x_cg_demo_api_key?: string,
+    x_cg_pro_api_key?: string
+  }
 
   /**
    * Constructor
    * @param options the options passed for client library, at the moment only timeout are support
+   * @param apiKeyOptions options for the API key, including whether it's a demo key.
+   *  *
    */
-  constructor(options?: Options, apiKey?: string) {
+  constructor(options?: Options, apiKeyOptions?: ApiKeyOptions) {
     this.options = { ...this.options, ...options };
-    if (!apiKey) {
+    if (!apiKeyOptions || apiKeyOptions.isDemo) {
       this.baseURL = CoinGeckoClient.API_V3_URL;
     } else {
       this.baseURL = CoinGeckoClient.PRO_API_V3_URL;
-      this.apiKey = apiKey;
+    }
+    if (apiKeyOptions){
+      this.apiKeyParam = apiKeyOptions.isDemo ? {
+        x_cg_demo_api_key: apiKeyOptions.apiKey
+      }: { x_cg_pro_api_key: apiKeyOptions.apiKey }
     }
   }
 
@@ -144,8 +154,8 @@ export class CoinGeckoClient {
     action: API_ROUTES,
     params: { [key: string]: any } = {}
   ): Promise<T> {
-    if (this.apiKey) {
-      params.x_cg_pro_api_key = this.apiKey;
+    if (this.apiKeyParam) {
+      params = {...params, ...this.apiKeyParam}
     }
     const qs = Object.entries(params)
       .map(([key, value]) => `${key}=${value}`)
@@ -229,7 +239,6 @@ valid values: true, false
     ids?: string;
     category?: "decentralized_finance_defi" | "stablecoins";
     order?:
-      | "market_cap_desc"
       | "gecko_desc"
       | "gecko_asc"
       | "market_cap_asc"
