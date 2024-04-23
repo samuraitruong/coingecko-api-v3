@@ -25,7 +25,9 @@ import {
   GlobalDefiResponse,
   Options,
   HttpResponse,
-  SearchResponse, Category, CategoryWithMarketData,
+  SearchResponse,
+  Category,
+  CategoryWithMarketData,
 } from "./Interface";
 
 /**

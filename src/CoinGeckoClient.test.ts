@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-import exp from "node:constants";
 import { CoinGeckoClient } from "./CoinGeckoClient";
 
 const client = new CoinGeckoClient();
