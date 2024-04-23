@@ -10,6 +10,8 @@ export enum API_ROUTES {
   COIN_MARKET_CHART = "/coins/{id}/market_chart",
   COIN_MARKET_CHART_RANGE = "/coins/{id}/market_chart/range",
   COIN_OHLC = "/coins/{id}/ohlc",
+  COIN_CATEGORIES_LIST = '/coins/categories/list',
+  COIN_CATEGORIES = '/coins/categories',
   SIMPLE_PRICE = "/simple/price",
   SIMPLE_SUPPORTED_CURRENCIES = "/simple/supported_vs_currencies",
   SIMPLE_TOKEN_PRICE = "/simple/token_price/{id}",

@@ -104,6 +104,22 @@ export interface CoinMarket extends BasicCoin {
   last_updated?: Date;
 }
 
+export interface Category {
+  category_id: string;
+  name: string;
+}
+
+export interface CategoryWithMarketData {
+  id: string;
+  name: string;
+  market_cap: number;
+  market_cap_change_24h: number;
+  content: string;
+  top_3_coins: Array<string>;
+  volume_24h: number;
+  updated_at: string;
+}
+
 export interface SimplePriceResponse {
   [coin: string]: {
     /**
