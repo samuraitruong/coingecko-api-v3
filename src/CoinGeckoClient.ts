@@ -26,6 +26,8 @@ import {
   Options,
   HttpResponse,
   SearchResponse,
+  Category,
+  CategoryWithMarketData,
 } from "./Interface";
 
 /**
@@ -233,7 +235,6 @@ valid values: true, false
       | "gecko_desc"
       | "gecko_asc"
       | "market_cap_asc"
-      | "market_cap_desc"
       | "volume_asc"
       | "volume_desc"
       | "id_asc"
@@ -400,7 +401,7 @@ valid values: true, false
    * @param input.id pass the coin id (can be obtained from /coins) eg. bitcoin
    * @param input.vs_currency The target currency of market data (usd, eur, jpy, etc.)
    * @param input.days Data up to number of days ago (1/7/14/30/90/180/365/max)
-   * @returns {CoinStatusUpdateResponse}
+   * @returns {Array<Array<number>>}
    * Sample output
    * ```
    * [
@@ -421,6 +422,31 @@ valid values: true, false
     days: number | "max";
   }) {
     return this.makeRequest<Array<Array<number>>>(API_ROUTES.COIN_OHLC, input);
+  }
+
+  /**
+   * Get all the coins categories on CoinGecko.
+   * @see https://docs.coingecko.com/reference/coins-categories-list
+   * @returns List of all categories
+   * @category Category
+   * @returns {Array<Category>}
+   */
+  public async coinCategoriesList() {
+    return this.makeRequest<Array<Category>>(API_ROUTES.COIN_CATEGORIES_LIST);
+  }
+
+  /**
+   * Get all the coins categories with market data (market cap, volume, etc.) on CoinGecko
+   * @see https://docs.coingecko.com/reference/coins-categories
+   * @param input.order sort results by field, default: market_cap_desc
+   * @returns List of all categories with market data
+   * @category Category
+   * @returns {Array<Category>}
+   */
+  public async coinCategoriesListWithMarketData(input: {
+    order?: 'market_cap_desc' | 'market_cap_asc' | 'name_asc' | 'name_desc' | 'market_cap_change_24h_asc' | 'market_cap_change_24h_desc' ;
+  } = {}) {
+    return this.makeRequest<Array<CategoryWithMarketData>>(API_ROUTES.COIN_CATEGORIES, input);
   }
 
   /**

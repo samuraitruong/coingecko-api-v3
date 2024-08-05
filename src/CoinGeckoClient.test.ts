@@ -105,6 +105,34 @@ describe("CoinGeckoClient test", () => {
     });
   });
 
+  describe("Category", () => {
+    it("/coins/categories/list should successful", async () => {
+      const list = await client.coinCategoriesList();
+      expect(list).toContainEqual({
+        category_id: expect.any(String),
+        name: expect.any(String),
+      });
+    });
+
+    it("/coins/categories should successful", async () => {
+      const list = await client.coinCategoriesListWithMarketData();
+      expect(list).toContainEqual({
+        id: expect.any(String),
+        name: expect.any(String),
+        market_cap: expect.any(Number),
+        market_cap_change_24h: expect.any(Number),
+        content: expect.any(String),
+        top_3_coins: expect.arrayContaining([
+          expect.any(String),
+          expect.any(String),
+          expect.any(String),
+        ]),
+        volume_24h: expect.any(Number),
+        updated_at: expect.any(String),
+      });
+    });
+  });
+
   describe("Simple", () => {
     it("/simple/market should successful", async () => {
       const price = await client.simpleTokenPrice({
