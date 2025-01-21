@@ -496,7 +496,7 @@ valid values: true, false
    * @category Simple
    */
   public async simpleTokenPrice(input: {
-    id: "ethereum";
+    id: string;
     contract_addresses: string;
     vs_currencies: string;
     include_market_cap?: boolean;
