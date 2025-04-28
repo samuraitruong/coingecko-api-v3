@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+ 
 import https from "https";
 import { API_ROUTES, PLATFORMS } from "./Enum";
 import {
@@ -784,7 +784,7 @@ valid values: true, false
    * @returns {DerivativeExchange[]}
    */
   public async derivativesExchanges(input: {
-    // eslint-disable-next-line max-len
+     
     order?:
       | "name_asc"
       | "name_desc"
