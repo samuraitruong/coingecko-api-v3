@@ -1,6 +1,6 @@
 {
   "name": "coingecko-api-v3",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "The nodejs api library for accessing coingecko api v3 , develop with typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
