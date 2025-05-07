@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import { CoinGeckoClient } from "./CoinGeckoClient";
 
 const client = new CoinGeckoClient();
