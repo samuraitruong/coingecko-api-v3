@@ -108,3 +108,7 @@ docs/
 
 package-lock.json
 .yarn/cache
+
+
+.pnpm-store/
+.pnpm-debug.log
